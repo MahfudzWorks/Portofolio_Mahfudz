@@ -7,8 +7,8 @@ import About from "./pages/About";
 import Projects from "./pages/Projects"
 import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
-// import License from "./pages/License";
-// import Contact from "./pages/Contact";
+import License from "./pages/License";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
       <Projects />
       <Skills />
       <Experience />
-      {/* <License />
-      <Contact /> */}
+      <License />
+      <Contact />
       <Footer />
     </>
   )
