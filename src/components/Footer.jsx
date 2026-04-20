@@ -25,7 +25,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="p-[3px] bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] text-gray-600">
+    <footer className="p-[3px] border-t border-gray-200 text-gray-600">
       <div className="bg-white rounded-t-2xl shadow-lg transition-all duration-500 hover:shadow-xl">
         <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col items-center text-center">
           <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
