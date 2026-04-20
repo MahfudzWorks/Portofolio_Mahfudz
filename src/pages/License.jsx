@@ -55,7 +55,6 @@ const License = () => {
       id="license"
       className="relative flex flex-col justify-center items-center py-10"
     >
-      <AnimatedBackground />
       <h1 className="text-3xl font-bold text-black mb-6">
         <span className="inline-block animate-pulse">📜</span> License{" "}
         <span className="inline-block animate-ping">✅</span>
