@@ -151,8 +151,6 @@ const Skills = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 200, damping: 15 }}
             className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 p-[2px] rounded-2xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
           >

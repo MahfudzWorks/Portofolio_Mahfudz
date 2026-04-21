@@ -1,5 +1,18 @@
 import {useState} from 'react'
 
+import {
+  FaReact,
+} from "react-icons/fa";
+
+import {
+  SiLaravel,
+  SiPhp,
+  SiJavascript,
+  SiMysql,
+  SiHtml5,
+  SiTailwindcss 
+} from "react-icons/si";
+
 const Projects = () => {
 
     const [showMore, setShowMore] = useState({});
@@ -16,11 +29,11 @@ const Projects = () => {
             image: "assets/P-BestCell.svg",
             link: "",
             icons: [
-                "assets/icon/Laravel.svg",
-                "assets/icon/PHP.svg",
-                "assets/icon/CSS3.svg",
-                "assets/icon/JavaScript.svg",
-                "assets/icon/MySQL.svg",
+                { type: "component", value: <SiLaravel className="text-red-500 text-2xl" /> },
+                { type: "component", value: <SiPhp className="text-indigo-400 text-2xl" /> },
+                { type: "img", value: "assets/icon/CSS3.svg" },
+                { type: "component", value: <SiJavascript className="text-yellow-400 text-2xl" /> },
+                { type: "component", value: <SiMysql className="text-blue-700 text-2xl" /> },
             ],
         },
         {
@@ -30,94 +43,99 @@ const Projects = () => {
             image: "assets/P-PNRB.svg",
             link: "https://mahfudzworks.github.io/Project_Pagarnusa_RantingBalongmojo_Website/",
             icons: [
-                "assets/icon/Html5.svg",
-                "assets/icon/CSS3.svg",
-                "assets/icon/JavaScript.svg",
+                { type: "img", value: "assets/icon/Html5.svg" },
+                { type: "img", value: "assets/icon/CSS3.svg" },
+                { type: "img", value: "assets/icon/JavaScript.svg" },
             ],
         },
-            {
+        {
             id: 3,
             title: "Project Landing Page Gym24",
             text: "Landing page untuk Gym24, pusat kebugaran yang menawarkan fasilitas modern, pelatih profesional, dan berbagai pilihan membership. Website ini dibuat untuk mempromosikan layanan Gym24 dengan tampilan modern, responsif, dan mudah digunakan.",
             image: "assets/P-Gym.svg",
             link: "https://mahfudzworks.github.io/Project_gym24-landing-page/",
             icons: [
-                "assets/icon/Html5.svg",
-                "assets/icon/CSS3.svg",
-                "assets/icon/JavaScript.svg",
+                { type: "img", value: "assets/icon/Html5.svg" },
+                { type: "img", value: "assets/icon/CSS3.svg" },
+                { type: "img", value: "assets/icon/JavaScript.svg" },
             ],
         },
-            {
+        {
             id: 4,
             title: "Project Kalkulator",
-            text: "Landing page untuk Gym24, pusat kebugaran yang menawarkan fasilitas modern, pelatih profesional, dan berbagai pilihan membership. Website ini dibuat untuk mempromosikan layanan Gym24 dengan tampilan modern, responsif, dan mudah digunakan.",
+            text: "Website kalkulator sederhana dengan tampilan modern dan responsif.",
             image: "assets/P-Kalkulator.svg",
             link: "https://mahfudzworks.github.io/Project_Kalkulator/",
             icons: [
-                "assets/icon/Html5.svg",
-                "assets/icon/CSS3.svg",
-                "assets/icon/JavaScript.svg",
+                { type: "img", value: "assets/icon/Html5.svg" },
+                { type: "img", value: "assets/icon/JavaScript.svg" },
+                { type: "component", value: <FaReact className="text-cyan-400 text-2xl" /> },
+                { type: "component", value: <SiTailwindcss className="text-sky-400 text-2xl" /> },
             ],
         },
-            {
+        {
             id: 5,
             title: "Project BMI Kalkulator",
-            text: "Landing page untuk Gym24, pusat kebugaran yang menawarkan fasilitas modern, pelatih profesional, dan berbagai pilihan membership. Website ini dibuat untuk mempromosikan layanan Gym24 dengan tampilan modern, responsif, dan mudah digunakan.",
+            text: "Aplikasi untuk menghitung BMI dengan tampilan sederhana dan interaktif.",
             image: "assets/P-BMIKalkulator.svg",
             link: "https://mahfudzworks.github.io/BMI_Kalkulator/",
             icons: [
-                "assets/icon/Html5.svg",
-                "assets/icon/CSS3.svg",
-                "assets/icon/JavaScript.svg",
+                { type: "img", value: "assets/icon/Html5.svg" },
+                { type: "img", value: "assets/icon/JavaScript.svg" },
+                { type: "component", value: <FaReact className="text-cyan-400 text-2xl" /> },
+                { type: "component", value: <SiTailwindcss className="text-sky-400 text-2xl" /> },
             ],
         },
-            {
+        {
             id: 6,
-            title: "Project Collor Palete",
-            text: "Landing page untuk Gym24, pusat kebugaran yang menawarkan fasilitas modern, pelatih profesional, dan berbagai pilihan membership. Website ini dibuat untuk mempromosikan layanan Gym24 dengan tampilan modern, responsif, dan mudah digunakan.",
+            title: "Project Color Palette",
+            text: "Generator warna untuk membantu memilih kombinasi warna yang menarik.",
             image: "assets/P-CollorPalete.svg",
             link: "https://mahfudzworks.github.io/Project_Color_Palette_Generator/",
             icons: [
-                "assets/icon/Html5.svg",
-                "assets/icon/CSS3.svg",
-                "assets/icon/JavaScript.svg",
+                { type: "img", value: "assets/icon/Html5.svg" },
+                { type: "img", value: "assets/icon/JavaScript.svg" },
+                { type: "component", value: <FaReact className="text-cyan-400 text-2xl" /> },
+                { type: "component", value: <SiTailwindcss className="text-sky-400 text-2xl" /> },
             ],
         },
-            {
+        {
             id: 7,
             title: "Project Digital Clock",
-            text: "Landing page untuk Gym24, pusat kebugaran yang menawarkan fasilitas modern, pelatih profesional, dan berbagai pilihan membership. Website ini dibuat untuk mempromosikan layanan Gym24 dengan tampilan modern, responsif, dan mudah digunakan.",
+            text: "Jam digital real-time dengan tampilan modern dan responsif.",
             image: "assets/P-DigitalClock.svg",
             link: "https://mahfudzworks.github.io/Project_Digital_Clock/",
             icons: [
-                "assets/icon/Html5.svg",
-                "assets/icon/CSS3.svg",
-                "assets/icon/JavaScript.svg",
+                { type: "img", value: "assets/icon/Html5.svg" },
+                { type: "img", value: "assets/icon/JavaScript.svg" },
+                { type: "component", value: <FaReact className="text-cyan-400 text-2xl" /> },
+                { type: "component", value: <SiTailwindcss className="text-sky-400 text-2xl" /> },
             ],
         },
-            
-            {
+        {
             id: 8,
-            title: "Project Smart Quizz",
-            text: "Landing page untuk Gym24, pusat kebugaran yang menawarkan fasilitas modern, pelatih profesional, dan berbagai pilihan membership. Website ini dibuat untuk mempromosikan layanan Gym24 dengan tampilan modern, responsif, dan mudah digunakan.",
+            title: "Project Smart Quiz",
+            text: "Aplikasi kuis interaktif untuk menguji pengetahuan pengguna.",
             image: "assets/P-SmartQuiz.svg",
             link: "https://mahfudzworks.github.io/Project_Smart_Quizz/",
             icons: [
-                "assets/icon/Html5.svg",
-                "assets/icon/CSS3.svg",
-                "assets/icon/JavaScript.svg",
+                { type: "img", value: "assets/icon/Html5.svg" },
+                { type: "img", value: "assets/icon/JavaScript.svg" },
+                { type: "component", value: <FaReact className="text-cyan-400 text-2xl" /> },
+                { type: "component", value: <SiTailwindcss className="text-sky-400 text-2xl" /> },
             ],
         },
-            {
+        {
             id: 9,
             title: "Project Weather App",
             text: "Landing page untuk Gym24, pusat kebugaran yang menawarkan fasilitas modern, pelatih profesional, dan berbagai pilihan membership. Website ini dibuat untuk mempromosikan layanan Gym24 dengan tampilan modern, responsif, dan mudah digunakan.",
             image: "assets/P-WeatherApp.svg",
             link: "https://mahfudzworks.github.io/Project_Weather-APP/",
             icons: [
-                "assets/icon/Html5.svg",
-                "assets/icon/CSS3.svg",
-                "assets/icon/JavaScript.svg",
+                { type: "img", value: "assets/icon/Html5.svg" },
+                { type: "img", value: "assets/icon/JavaScript.svg" },
+                { type: "component", value: <FaReact className="text-cyan-400 text-2xl" /> },
+                { type: "component", value: <SiTailwindcss className="text-sky-400 text-2xl" /> },
             ],
         },
     ];
@@ -170,9 +188,24 @@ const Projects = () => {
                 </button>
 
                 <div className="flex flex-wrap gap-2 mt-3">
-                {project.icons.map((icon, index) => (
-                    <img key={index} src={icon} alt="icon" className="w-8 h-8" />
-                ))}
+                {project.icons.map((icon, index) => {
+                    if (icon.type === "img") {
+                        return (
+                        <img
+                            key={index}
+                            src={icon.value}
+                            alt="icon"
+                            className="w-7 h-7 hover:scale-110 transition"
+                        />
+                        );
+                    }
+
+                    return (
+                        <span key={index} className="hover:scale-110 transition">
+                        {icon.value}
+                        </span>
+                    );
+                    })}
                 </div>
             </div>
             ))}
