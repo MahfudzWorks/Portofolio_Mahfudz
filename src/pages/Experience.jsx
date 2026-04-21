@@ -143,7 +143,7 @@ const Experience = () => {
               Guru Ekstrakurikuler
             </h2>
             <h3 className="font-semibold">
-              SMP Negeri 28 Gresi
+              SMP Negeri 28 Gresik
             </h3>
             <h3 className="md:hidden font-semibold">
               08/2023 - 08/2025
@@ -154,6 +154,46 @@ const Experience = () => {
               tradisional, serta berhasil membimbing siswa meraih prestasi.
             </p>
           </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div className="relative flex flex-col md:flex-row md:justify-center text-center md:text-left mt-4 md:gap-8 px-8 mx-auto">
+        <div className="md:w-120 p-[2px] rounded-lg bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
+          <div className="md:text-left text-center p-6 rounded-lg bg-white backdrop-blur-md shadow-lg">
+            <h2 className="font-semibold">Operator – Stationery Pad</h2>
+            <h3 className="font-semibold">
+              PT Pabrik Kertas Tjiwi Kimia Tbk (Internship Kemnaker)
+            </h3>
+            <h3 className="md:hidden font-semibold">
+              11/2025 - Sekarang
+            </h3>
+            <ul className="text-gray-600 mt-2 list-disc list-inside text-left">
+              <li>Memahami alur proses mesin produk Legal Pad dan GNB</li>
+              <li>Menerapkan sistem manajemen mutu ISO 9001 dan K3</li>
+              <li>Mengikuti SOP, Work Instruction, dan alur produksi</li>
+              <li>Melakukan quality control produk sesuai standar</li>
+              <li>Mendukung administrasi produksi dan pengelolaan material</li>
+              <li>Terlibat dalam operasional E-Ticket dan Carton Box</li>
+              <li>Beradaptasi lintas divisi (Finishing, Etiket, E-Material)</li>
+              <li>Menerapkan prinsip 6S di area kerja</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="hidden rounded-full w-16 h-16 md:flex items-center justify-center shrink-0 bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] p-[2px]">
+          <div className="bg-white w-full h-full rounded-full flex items-center justify-center">
+            <img
+              src="assets/icon/folder.svg"
+              alt="folder"
+              className="w-8"
+            />
+          </div>
+        </div>
+
+        <div className="hidden md:flex w-120 md:text-left text-center">
+          <h3 className="py-5">11/2025 - Sekarang</h3>
         </div>
       </div>
 
