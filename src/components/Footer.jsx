@@ -25,7 +25,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="p-[3px] border-t border-gray-200 text-gray-600">
+    <footer className="p-[3px] w-full h-[2px] bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] text-gray-600">
       <div className="bg-white rounded-t-2xl shadow-lg transition-all duration-500 hover:shadow-xl">
         <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col items-center text-center">
           <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
@@ -58,7 +58,9 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="border-t border-gray-200 mt-6 pt-3 text-xs sm:text-sm text-gray-500">
+         <div className="mt-6 pt-4 text-xs sm:text-sm text-gray-500 relative">
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)]"></div>
+
             © {new Date().getFullYear()}{" "}
             <span className="font-semibold text-gray-800">
               Mahfudz Alfanani Syaviqi

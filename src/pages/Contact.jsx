@@ -26,10 +26,8 @@ const Contact = () => {
 
       <div className="text-center max-w-3xl mt-4">
         <p className="text-gray-600 px-2 sm:px-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          commodi qui consectetur cumque suscipit odit, fuga delectus.
-          Cupiditate neque possimus saepe. Quidem eaque modi aperiam cum
-          explicabo earum perspiciatis reiciendis.
+          Terima kasih sudah mengunjungi portfolio saya. 
+          Jika Anda ingin bekerja sama atau sekadar menyapa, silakan kirim pesan di bawah ini 😊
         </p>
 
         <form
