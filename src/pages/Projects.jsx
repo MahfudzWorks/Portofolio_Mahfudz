@@ -78,7 +78,7 @@ const Projects = () => {
             title: "Project BMI Kalkulator",
             text: "Aplikasi untuk menghitung BMI dengan tampilan sederhana dan interaktif.",
             image: "assets/P-BMIKalkulator.svg",
-            link: "https://mahfudzworks.github.io/BMI_Kalkulator/",
+            link: "https://mahfudzworks.github.io/Project_BMI_Kalkulator/",
             icons: [
                 { type: "img", value: "assets/icon/Html5.svg" },
                 { type: "img", value: "assets/icon/JavaScript.svg" },
