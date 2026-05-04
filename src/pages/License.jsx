@@ -84,7 +84,7 @@ const License = () => {
 
   const [showAll, setShowAll] = useState(false);
 
-  const displayedLicenses = showAll ? licenses : licenses.slice(0, 3);
+  const displayedLicenses = showAll ? licenses : licenses.slice(0, 9);
   return (
     <section
       id="license"
