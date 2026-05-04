@@ -11,7 +11,8 @@ import { SiMysql, SiTailwindcss } from "react-icons/si";
 import { SiCanva, SiFigma} from "react-icons/si";
 
 const Skills = () => {
-    const [view, setView] = useState("skills"); // "skills" | "tools"
+    const [view, setView] = useState("skills");
+    const [activeIndex, setActiveIndex] = useState(null);
 
     const skills = [
         { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-5xl" /> },
@@ -151,15 +152,21 @@ const Skills = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            transition={{ type: "spring", stiffness: 200, damping: 15 }}
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 p-[2px] rounded-2xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
+            onClick={() => setActiveIndex(index === activeIndex ? null : index)}
+            className="relative group w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 p-[2px] rounded-2xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
           >
-            <div className="flex flex-col items-center justify-center w-full h-full bg-white backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl">
+            <div className="flex flex-col items-center justify-center w-full h-full bg-white rounded-2xl shadow-lg hover:shadow-xl">
               <div className="mb-4">{item.icon}</div>
               <h3 className="font-semibold text-sm sm:text-base md:text-lg text-gray-800">
                 {item.name}
               </h3>
             </div>
+           
+           {activeIndex === index && (
+            <div className="absolute bottom-full mb-2 px-3 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+              {item.name}
+            </div>
+           )}
           </div>
         ))}
       </div>
