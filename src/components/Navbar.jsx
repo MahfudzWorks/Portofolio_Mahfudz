@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
 
-  // Efek sembunyi/muncul saat scroll
   useEffect(() => {
     let lastY = window.scrollY;
 
@@ -26,7 +25,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Efek aktifkan link sesuai posisi scroll
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
@@ -45,7 +43,6 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Fungsi scroll halus ke section
   const handleScrollTo = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -56,8 +53,8 @@ const Navbar = () => {
 
   const linkClass = (id) =>
     activeSection === id
-      ? "text-blue-600 font-semibold text-sm"
-      : "text-black hover:font-semibold text-sm";
+      ? "text-blue-600 dark:text-blue-400 font-semibold text-sm"
+      : "text-black dark:text-white hover:font-semibold text-sm transition-colors duration-300";
 
   const navLinks = [
     { id: "home", label: "Home" },
@@ -68,13 +65,18 @@ const Navbar = () => {
     { id: "license", label: "License" },
     { id: "contact", label: "Contact" },
   ];
+
   return (
     <div
-      className={`md:w-160 rounded-4xl p-1 shadow-lg fixed top-2 left-1/2 -translate-x-1/2 z-50 transition-transform duration-500 ${
+      className={`md:w-160 rounded-4xl p-1 shadow-lg 
+      bg-white/90 dark:bg-gray-900/90
+      backdrop-blur-md
+      border border-gray-200/70 dark:border-gray-700/60
+      fixed top-2 left-1/2 -translate-x-1/2 z-50 transition-transform duration-500 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className="flex justify-center bg-white text-black gap-4 rounded-3xl">
+      <nav className="flex justify-center bg-white dark:bg-gray-900 text-black dark:text-white gap-4 rounded-3xl transition-colors duration-300">
         <ul className="hidden md:flex list-none space-x-8 items-center">
           {navLinks.map((link) => (
             <li key={link.id}>
@@ -89,7 +91,7 @@ const Navbar = () => {
         </ul>
 
         <button
-          className="md:hidden text-2xl text-black"
+          className="md:hidden text-2xl text-black dark:text-white transition-colors duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <HiX /> : <HiMenu />}
@@ -97,7 +99,7 @@ const Navbar = () => {
       </nav>
 
       {isOpen && (
-        <ul className="md:hidden mt-4 flex flex-col gap-4 bg-white rounded-xl p-4 shadow">
+        <ul className="md:hidden mt-4 flex flex-col gap-4 bg-white dark:bg-gray-900 rounded-xl p-4 shadow text-black dark:text-white transition-colors duration-300">
           {navLinks.map((link) => (
             <li key={link.id}>
               <button
