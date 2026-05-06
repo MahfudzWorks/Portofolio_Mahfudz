@@ -142,74 +142,115 @@ const Projects = () => {
 
     return (
     <section
-        id="Projects"
-        className="relative flex flex-col justify-center items-center scroll-mt-20"
-        >
-        <h1 className="text-3xl font-bold text-black mt-14">
-            <span className="inline-block animate-bounce">💻</span> Projects{" "}
-            <span className="inline-block animate-pulse">🚧</span>
-        </h1>
+      id="Projects"
+      className="relative flex flex-col justify-center items-center scroll-mt-20 px-4"
+    >
+      <h1 className="text-3xl font-bold text-black dark:text-white mt-14 transition-colors duration-300">
+        <span className="inline-block animate-bounce">💻</span> Projects{" "}
+        <span className="inline-block animate-pulse">🚧</span>
+      </h1>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl px-8 mt-8">
-            {projects.map((project) => (
-            <div
-                key={project.id}
-                className="flex flex-col bg-white shadow-lg p-4"
+      <div className="grid md:grid-cols-3 gap-6 max-w-6xl w-full mt-8">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="
+              flex flex-col
+              bg-white dark:bg-gray-800
+              border border-gray-200 dark:border-gray-700
+              shadow-lg dark:shadow-gray-900/30
+              rounded-2xl
+              p-4
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:shadow-xl
+            "
+          >
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-                <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                >
+              <div className="overflow-hidden rounded-xl">
                 <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full mb-4 h-auto p-4 md:p-0 
-                    hover:opacity-80 hover:scale-105 
-                    transition duration-300 cursor-pointer"
+                  src={project.image}
+                  alt={project.title}
+                  className="
+                    w-full h-auto p-4 md:p-0
+                    hover:scale-105
+                    transition duration-300
+                    cursor-pointer
+                  "
                 />
-                </a>
+              </div>
+            </a>
 
-                <h2 className="font-semibold">{project.title}</h2>
+            <h2 className="font-semibold text-lg mt-3 text-black dark:text-white">
+              {project.title}
+            </h2>
 
-                <p className="text-gray-600 mt-2">
-                {showMore[project.id]
-                    ? project.text
-                    : project.text.substring(0, 100) + "..."}
-                </p>
+            <p className="text-gray-600 dark:text-gray-300 mt-2 leading-relaxed text-sm">
+              {showMore[project.id]
+                ? project.text
+                : project.text.substring(0, 100) + "..."}
+            </p>
 
-                <button
-                onClick={() => toggleShowMore(project.id)}
-                className="text-gray-600 font-semibold mt-2 hover:underline"
-                >
-                {showMore[project.id]
-                    ? "Tampilkan lebih sedikit"
-                    : "Tampilkan lebih banyak"}
-                </button>
+            <button
+              onClick={() => toggleShowMore(project.id)}
+              className="
+                text-blue-600 dark:text-blue-400
+                font-semibold
+                mt-3
+                hover:underline
+                text-sm
+                w-fit
+              "
+            >
+              {showMore[project.id]
+                ? "Tampilkan lebih sedikit"
+                : "Tampilkan lebih banyak"}
+            </button>
 
-                <div className="flex flex-wrap gap-2 mt-3">
-                {project.icons.map((icon, index) => {
-                    if (icon.type === "img") {
-                        return (
-                        <img
-                            key={index}
-                            src={icon.value}
-                            alt="icon"
-                            className="w-7 h-7 hover:scale-110 transition"
-                        />
-                        );
-                    }
+            <div className="flex flex-wrap gap-3 mt-4">
+              {project.icons.map((icon, index) => {
+                if (icon.type === "img") {
+                  return (
+                    <div
+                      key={index}
+                      className="
+                        bg-gray-100 dark:bg-gray-700
+                        p-2 rounded-lg
+                        hover:scale-110
+                        transition
+                      "
+                    >
+                      <img
+                        src={icon.value}
+                        alt="icon"
+                        className="w-6 h-6"
+                      />
+                    </div>
+                  );
+                }
 
-                    return (
-                        <span key={index} className="hover:scale-110 transition">
-                        {icon.value}
-                        </span>
-                    );
-                    })}
-                </div>
+                return (
+                  <div
+                    key={index}
+                    className="
+                      bg-gray-100 dark:bg-gray-700
+                      p-2 rounded-lg
+                      hover:scale-110
+                      transition
+                    "
+                  >
+                    {icon.value}
+                  </div>
+                );
+              })}
             </div>
-            ))}
-        </div>
+          </div>
+        ))}
+      </div>
     </section>
   )
 }
