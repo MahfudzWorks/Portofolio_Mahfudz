@@ -3,15 +3,16 @@ import React from 'react'
 const About = () => {
   return (
     <section
-        id="about"
-        className="flex flex-col justify-center items-center scroll-mt-26 px-4 sm:px-6 lg:px-0"
+      id="about"
+      className="flex flex-col justify-center items-center scroll-mt-26 px-4 sm:px-6 lg:px-0"
     >
-        <h1 className="text-2xl sm:text-3xl font-bold text-black mt-4 text-center">
+      <h1 className="text-2xl sm:text-3xl font-bold mt-4 text-center text-black dark:text-white">
         <span className="inline-block">👨‍💻</span> About Me{" "}
         <span className="inline-block animate-spin">🌟</span>
       </h1>
-        <div className="text-center max-w-3xl mt-4 sm:mt-6">
-        <p className="text-sm sm:text-base leading-relaxed">
+
+      <div className="text-center max-w-3xl mt-4 sm:mt-6">
+        <p className="text-sm sm:text-base leading-relaxed text-black dark:text-white">
           Selama kuliah saya aktif sebagai Sekretaris Karang Taruna serta
           mengelola usaha Jasa Joki Tugas Vyyy yang menyediakan layanan akademik
           dan pengembangan website.
@@ -26,7 +27,6 @@ const About = () => {
           pengembangan solusi digital di bidang teknologi.
         </p>
       </div>
-
     </section>
   )
 }

@@ -21,10 +21,23 @@ function App() {
 
   return (
     <>
-
       <button
         onClick={() => setDark(!dark)}
-        className="fixed top-4 right-4 z-50 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black"
+        className="
+          fixed bottom-5 right-5 z-50
+          w-11 h-11
+          sm:w-12 sm:h-12
+          rounded-full
+          flex items-center justify-center
+          backdrop-blur-md
+          bg-white/80 dark:bg-gray-800/80
+          text-xl
+          shadow-lg
+          border border-gray-300 dark:border-gray-700
+          hover:scale-110
+          active:scale-95
+          transition-all duration-300
+        "
       >
         {dark ? "☀️" : "🌙"}
       </button>
