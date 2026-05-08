@@ -90,7 +90,7 @@ const License = () => {
       id="license"
       className="relative flex flex-col justify-center items-center py-10"
     >
-      <h1 className="text-3xl font-bold text-black mb-6">
+      <h1 className="text-3xl font-bold text-black dark:text-white mb-6 transition-colors duration-300">
         <span className="inline-block animate-pulse">📜</span> License{" "}
         <span className="inline-block animate-ping">✅</span>
       </h1>
@@ -101,17 +101,32 @@ const License = () => {
             key={index}
             className="p-[2px] rounded-lg bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
           >
-            <div className="bg-white rounded-lg p-5 shadow-lg flex flex-col items-center h-full">
+            <div
+              className="
+                bg-white dark:bg-gray-900
+                rounded-lg p-5 shadow-lg
+                flex flex-col items-center h-full
+                transition-colors duration-300
+              "
+            >
               <img
                 src={license.img}
                 alt={license.title}
                 className="w-full h-48 object-contain rounded-lg mb-4"
               />
-              <h2 className="text-lg font-semibold text-gray-800 text-center">
+
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-white text-center transition-colors duration-300">
                 {license.title}
               </h2>
-              <p className="text-gray-600 text-sm text-center">{license.org}</p>
-              <p className="text-sm text-gray-500">{license.date}</p>
+
+              <p className="text-gray-600 dark:text-gray-300 text-sm text-center transition-colors duration-300">
+                {license.org}
+              </p>
+
+              <p className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">
+                {license.date}
+              </p>
+
               <a
                 href={license.link}
                 target="_blank"
@@ -119,14 +134,19 @@ const License = () => {
                 className="mt-2 p-[2px] bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] rounded-lg inline-block"
               >
                 <div
-                  className="flex items-center gap-2 
-               bg-white text-gray-600 
-               font-semibold px-6 py-2 rounded-lg 
-               transition-all duration-300 ease-in-out
-               hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50 
-               hover:shadow-md active:scale-[0.98]"
+                  className="
+                    flex items-center gap-2 
+                    bg-white dark:bg-gray-800
+                    text-gray-600 dark:text-white
+                    font-semibold px-6 py-2 rounded-lg 
+                    transition-all duration-300 ease-in-out
+                    hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50
+                    dark:hover:from-gray-700 dark:hover:to-gray-800
+                    hover:shadow-md active:scale-[0.98]
+                  "
                 >
                   <span>View Certificate</span>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -152,12 +172,17 @@ const License = () => {
         <div className="mt-6 p-[2px] bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] rounded-lg inline-block">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="flex items-center justify-center 
-                 bg-white text-gray-600 font-semibold 
-                 px-6 py-2 rounded-lg 
-                 transition-all duration-300 ease-in-out
-                 hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50 
-                 hover:shadow-md active:scale-[0.98]"
+            className="
+              flex items-center justify-center 
+              bg-white dark:bg-gray-900
+              text-gray-600 dark:text-white
+              font-semibold 
+              px-6 py-2 rounded-lg 
+              transition-all duration-300 ease-in-out
+              hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50
+              dark:hover:from-gray-700 dark:hover:to-gray-800
+              hover:shadow-md active:scale-[0.98]
+            "
           >
             {showAll ? "Show Less" : "Show All"}
           </button>
