@@ -14,19 +14,20 @@ const Contact = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   };
+
   return (
     <section
       id="contact"
-      className="relative flex flex-col justify-center items-center px-4 sm:px-6 lg:px-12 scroll-mt-16"
+      className="relative flex flex-col justify-center items-center px-4 sm:px-6 lg:px-12 scroll-mt-16 text-black dark:text-white transition-colors duration-300"
     >
-      <h1 className="text-3xl font-bold text-black mt-6 text-center">
+      <h1 className="text-3xl font-bold text-black dark:text-white mt-6 text-center transition-colors duration-300">
         <span className="inline-block animate-bounce">📩</span> Contact Me{" "}
         <span className="inline-block animate-ping">🤝</span>
       </h1>
 
       <div className="text-center max-w-3xl mt-4">
-        <p className="text-gray-600 px-2 sm:px-4">
-          Terima kasih sudah mengunjungi portfolio saya. 
+        <p className="text-gray-600 dark:text-gray-300 px-2 sm:px-4 transition-colors duration-300">
+          Terima kasih sudah mengunjungi portfolio saya.
           Jika Anda ingin bekerja sama atau sekadar menyapa, silakan kirim pesan di bawah ini 😊
         </p>
 
@@ -41,7 +42,13 @@ const Contact = () => {
               placeholder="Your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg outline-none bg-white shadow-lg text-sm sm:text-base"
+              className="
+                w-full px-4 py-3 rounded-lg outline-none
+                bg-white dark:bg-gray-900
+                text-black dark:text-white
+                shadow-lg text-sm sm:text-base
+                transition-colors duration-300
+              "
               required
             />
           </div>
@@ -53,7 +60,13 @@ const Contact = () => {
               placeholder="Your Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg outline-none bg-white shadow-lg text-sm sm:text-base"
+              className="
+                w-full px-4 py-3 rounded-lg outline-none
+                bg-white dark:bg-gray-900
+                text-black dark:text-white
+                shadow-lg text-sm sm:text-base
+                transition-colors duration-300
+              "
               required
             ></textarea>
           </div>
@@ -61,11 +74,17 @@ const Contact = () => {
           <div className="p-[2px] bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] rounded-lg">
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 sm:gap-3 bg-white text-green-600 
-               font-semibold px-5 py-2 sm:px-6 sm:py-3 rounded-lg 
-               transition-all duration-300 ease-in-out
-               hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50 
-               hover:shadow-md active:scale-[0.98] text-sm sm:text-base"
+              className="
+                flex items-center justify-center gap-2 sm:gap-3
+                bg-white dark:bg-gray-900
+                text-green-600 dark:text-green-400
+                font-semibold px-5 py-2 sm:px-6 sm:py-3 rounded-lg
+                transition-all duration-300 ease-in-out
+                hover:bg-gradient-to-r hover:from-green-50 hover:to-blue-50
+                dark:hover:from-gray-800 dark:hover:to-gray-700
+                hover:shadow-md active:scale-[0.98]
+                text-sm sm:text-base
+              "
             >
               Send via WhatsApp
               <img

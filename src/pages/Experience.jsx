@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Experience = () => {
+  const [selectedImages, setSelectedImages] = useState(null);
+
   const experiences = [
     {
       title: "Software Developer",
@@ -9,6 +11,10 @@ const Experience = () => {
       description:
         "Bertanggung jawab dalam pengembangan sistem digital, termasuk pembuatan website ecommerce menggunakan framework Laravel, mulai dari proses frontend, backend, hingga testing.",
       position: "left",
+      images: [
+        "assets/experience/fintech1.png",
+        "assets/experience/fintech2.png",
+      ],
     },
 
     {
@@ -18,6 +24,10 @@ const Experience = () => {
       description:
         "Bertugas mencatat pemasukan dan pengeluaran keuangan organisasi, menyusun surat undangan, proposal sponsor, serta mengelola administrasi untuk mendukung kelancaran kegiatan Kartar.",
       position: "right",
+      images: [
+        "assets/experience/kartar1.jpg",
+        "assets/experience/kartar2.jpg",
+      ],
     },
 
     {
@@ -25,8 +35,12 @@ const Experience = () => {
       company: "Jasa Joki Tugas Vyyy",
       date: "01/2022 - 08/2025",
       description:
-        "Mendirikan dan mengelola layanan jasa pembuatan tugas akademik dan non-akademik, meliputi penulisan makalah, pengolahan data Excel, desain presentasi PowerPoint, serta pembuatan website dan desain grafis. Fokus pada kualitas, ketepatan waktu, dan kepuasan klien.",
+        "Mendirikan dan mengelola layanan jasa pembuatan tugas akademik dan non-akademik, meliputi penulisan makalah, pengolahan data Excel, desain presentasi PowerPoint, serta pembuatan website dan desain grafis.",
       position: "left",
+      images: [
+        "assets/experience/vyyy1.png",
+        "assets/experience/vyyy2.png",
+      ],
     },
 
     {
@@ -34,14 +48,18 @@ const Experience = () => {
       company: "SMP Negeri 28 Gresik",
       date: "08/2023 - 08/2025",
       description:
-        "Mengajar ekstrakurikuler pencak silat sebagai upaya pengembangan minat dan bakat siswa di bidang olahraga dan seni bela diri tradisional, serta berhasil membimbing siswa meraih prestasi.",
+        "Mengajar ekstrakurikuler pencak silat sebagai upaya pengembangan minat dan bakat siswa.",
       position: "right",
+      images: [
+        "assets/experience/silat1.jpg",
+        "assets/experience/silat2.jpg",
+      ],
     },
 
     {
       title: "Operator – Stationery Pad",
       company: "PT Pabrik Kertas Tjiwi Kimia Tbk (Internship Kemnaker)",
-      date: "11/2025 - Sekarang",
+      date: "11/2025 - 05/2026",
       list: [
         "Memahami alur proses mesin produk Legal Pad dan GNB",
         "Menerapkan sistem manajemen mutu ISO 9001 dan K3",
@@ -53,6 +71,24 @@ const Experience = () => {
         "Menerapkan prinsip 6S di area kerja",
       ],
       position: "left",
+      images: [
+        "assets/experience/tjiwi1.jpg",
+        "assets/experience/tjiwi2.jpg",
+      ],
+      buttons: [
+      {
+        text: "View Certificate",
+        images: [],
+      },
+
+      {
+        text: "View Documentation",
+        images: [
+          "assets/documentation/doc1.jpg",
+          "assets/documentation/doc2.jpg",
+        ],
+      },
+    ],  
     },
   ];
 
@@ -104,6 +140,34 @@ const Experience = () => {
                       ))}
                     </ul>
                   )}
+
+                  {exp.buttons && (
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      {exp.buttons.map((btn, i) => (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            if (btn.images.length > 0) {
+                              setSelectedImages(btn.images);
+                            }
+                          }}
+                          className={`
+                            px-4 py-2 rounded-lg text-sm font-semibold
+                            transition-all duration-300
+                            ${
+                              btn.images.length > 0
+                                ? "bg-gradient-to-r from-blue-500 to-green-500 text-white hover:scale-105"
+                                : "bg-gray-300 dark:bg-gray-700 text-gray-500 cursor-not-allowed"
+                            }
+                          `}
+                        >
+                          {btn.images.length > 0
+                            ? btn.text
+                            : `${btn.text} (Coming Soon)`}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             )}
@@ -150,6 +214,20 @@ const Experience = () => {
                       ))}
                     </ul>
                   )}
+
+                  {exp.images && (
+                    <button
+                      onClick={() => setSelectedImages(exp.images)}
+                      className="
+                        mt-4 px-4 py-2 rounded-lg
+                        bg-gradient-to-r from-blue-500 to-green-500
+                        text-white text-sm font-semibold
+                        hover:scale-105 transition-all duration-300
+                      "
+                    >
+                      View Evidence
+                    </button>
+                  )}
                 </div>
               </div>
             )}
@@ -158,6 +236,60 @@ const Experience = () => {
           <br />
         </React.Fragment>
       ))}
+
+      {selectedImages && (
+        <div
+          className="
+            fixed inset-0 z-50
+            bg-black/70 backdrop-blur-sm
+            flex justify-center items-center
+            p-4
+          "
+        >
+          <div
+            className="
+              bg-white dark:bg-gray-900
+              rounded-2xl
+              max-w-4xl w-full
+              p-6
+              relative
+            "
+          >
+            <button
+              onClick={() => setSelectedImages(null)}
+              className="
+                absolute top-3 right-3
+                text-xl font-bold
+                text-gray-600 dark:text-white
+              "
+            >
+              ✕
+            </button>
+
+            <h2 className="text-2xl font-bold mb-4 dark:text-white">
+              Experience Evidence
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-4 max-h-[70vh] overflow-y-auto">
+              {selectedImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`evidence-${index}`}
+                  className="
+                    rounded-xl
+                    shadow-lg
+                    w-full
+                    object-cover
+                    hover:scale-[1.02]
+                    transition-all duration-300
+                  "
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="h-32" />
     </section>

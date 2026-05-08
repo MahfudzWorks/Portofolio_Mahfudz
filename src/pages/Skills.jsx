@@ -65,7 +65,7 @@ const Skills = () => {
   const tools = [
     {
       name: "Word",
-      level: "90%",
+      level: "95%",
       icon: (
         <img src="icons/Microsoft Word.svg" alt="Word" className="w-12 h-12" />
       ),
@@ -83,7 +83,7 @@ const Skills = () => {
     },
     {
       name: "PowerPoint",
-      level: "85%",
+      level: "90%",
       icon: (
         <img
           src="icons/Microsoft PowerPoint.svg"
@@ -94,7 +94,7 @@ const Skills = () => {
     },
     {
       name: "VS Code",
-      level: "95%",
+      level: "90%",
       icon: (
         <img
           src="icons/Visual Studio Code.svg"
@@ -105,14 +105,14 @@ const Skills = () => {
     },
     {
       name: "Figma",
-      level: "75%",
+      level: "85%",
       icon: (
         <img src="icons/Figma.svg" alt="Figma" className="w-12 h-12" />
       ),
     },
     {
       name: "Canva",
-      level: "90%",
+      level: "95%",
       icon: <SiCanva className="text-cyan-400 text-5xl" />,
     },
   ];
