@@ -11,9 +11,28 @@ const Experience = () => {
       description:
         "Bertanggung jawab dalam pengembangan sistem digital, termasuk pembuatan website ecommerce menggunakan framework Laravel, mulai dari proses frontend, backend, hingga testing.",
       position: "left",
-      images: [
-        "assets/experience/fintech1.png",
-        "assets/experience/fintech2.png",
+
+      buttons: [
+        {
+          text: "View Project",
+          images: [
+            "assets/project/project1.png",
+            "assets/project/project2.png",
+          ],
+        },
+
+        {
+          text: "View Certificate",
+          images: [],
+        },
+
+        {
+          text: "View Documentation",
+          images: [
+            "assets/documentation/doc1.jpg",
+            "assets/documentation/doc2.jpg",
+          ],
+        },
       ],
     },
 
@@ -24,9 +43,20 @@ const Experience = () => {
       description:
         "Bertugas mencatat pemasukan dan pengeluaran keuangan organisasi, menyusun surat undangan, proposal sponsor, serta mengelola administrasi untuk mendukung kelancaran kegiatan Kartar.",
       position: "right",
-      images: [
-        "assets/experience/kartar1.jpg",
-        "assets/experience/kartar2.jpg",
+
+      buttons: [
+        {
+          text: "View Gallery",
+          images: [
+            "assets/gallery/kartar1.jpg",
+            "assets/gallery/kartar2.jpg",
+          ],
+        },
+
+        {
+          text: "View Documentation",
+          images: [],
+        },
       ],
     },
 
@@ -37,9 +67,20 @@ const Experience = () => {
       description:
         "Mendirikan dan mengelola layanan jasa pembuatan tugas akademik dan non-akademik, meliputi penulisan makalah, pengolahan data Excel, desain presentasi PowerPoint, serta pembuatan website dan desain grafis.",
       position: "left",
-      images: [
-        "assets/experience/vyyy1.png",
-        "assets/experience/vyyy2.png",
+
+      buttons: [
+        {
+          text: "View Project",
+          images: [
+            "assets/project/vyyy1.png",
+            "assets/project/vyyy2.png",
+          ],
+        },
+
+        {
+          text: "View Gallery",
+          images: [],
+        },
       ],
     },
 
@@ -50,9 +91,41 @@ const Experience = () => {
       description:
         "Mengajar ekstrakurikuler pencak silat sebagai upaya pengembangan minat dan bakat siswa.",
       position: "right",
-      images: [
-        "assets/experience/silat1.jpg",
-        "assets/experience/silat2.jpg",
+
+      buttons: [
+        {
+          text: "View Certificate",
+          images: [],
+        },
+
+        {
+          text: "View Gallery",
+          images: [
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi1.jpg",
+              title: "Juara 1 Pencak Silat Grisse 2024",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi2.jpg",
+              title: "Juara 2 Pencak Silat Grisse 2024",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi3.jpg",
+              title: "Juara 3 Pencak Silat Grisse 2024",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi4.jpg",
+              title: "Juara O2SN Pencak Silat 2024",
+              desc: "Prestasi siswa dalam ajang Olimpiade Olahraga Siswa Nasional (O2SN) 2024.",
+            },
+          ],
+        },
       ],
     },
 
@@ -71,24 +144,26 @@ const Experience = () => {
         "Menerapkan prinsip 6S di area kerja",
       ],
       position: "left",
-      images: [
-        "assets/experience/tjiwi1.jpg",
-        "assets/experience/tjiwi2.jpg",
-      ],
-      buttons: [
-      {
-        text: "View Certificate",
-        images: [],
-      },
 
-      {
-        text: "View Documentation",
-        images: [
-          "assets/documentation/doc1.jpg",
-          "assets/documentation/doc2.jpg",
-        ],
-      },
-    ],  
+      buttons: [
+        {
+          text: "View Certificate",
+          images: [],
+        },
+
+        {
+          text: "View Gallery",
+          images: [
+            "assets/documentation/doc1.jpg",
+            "assets/documentation/doc2.jpg",
+          ],
+        },
+
+        {
+          text: "View Documentation",
+          images: [],
+        },
+      ],
     },
   ];
 
@@ -117,6 +192,7 @@ const Experience = () => {
             {exp.position === "left" && (
               <div className="md:w-120 p-[2px] rounded-lg bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
                 <div className="md:text-left text-center p-6 rounded-lg bg-white dark:bg-gray-900 backdrop-blur-md shadow-lg">
+
                   <h2 className="font-semibold">{exp.title}</h2>
 
                   <h3 className="font-semibold">
@@ -168,6 +244,7 @@ const Experience = () => {
                       ))}
                     </div>
                   )}
+
                 </div>
               </div>
             )}
@@ -191,6 +268,7 @@ const Experience = () => {
             {exp.position === "right" && (
               <div className="md:w-120 p-[2px] rounded-lg bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
                 <div className="md:text-left text-center p-6 rounded-lg bg-white dark:bg-gray-900 backdrop-blur-md shadow-lg">
+
                   <h2 className="font-semibold">{exp.title}</h2>
 
                   <h3 className="font-semibold">
@@ -215,22 +293,38 @@ const Experience = () => {
                     </ul>
                   )}
 
-                  {exp.images && (
-                    <button
-                      onClick={() => setSelectedImages(exp.images)}
-                      className="
-                        mt-4 px-4 py-2 rounded-lg
-                        bg-gradient-to-r from-blue-500 to-green-500
-                        text-white text-sm font-semibold
-                        hover:scale-105 transition-all duration-300
-                      "
-                    >
-                      View Evidence
-                    </button>
+                  {exp.buttons && (
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      {exp.buttons.map((btn, i) => (
+                        <button
+                          key={i}
+                          onClick={() => {
+                            if (btn.images.length > 0) {
+                              setSelectedImages(btn.images);
+                            }
+                          }}
+                          className={`
+                            px-4 py-2 rounded-lg text-sm font-semibold
+                            transition-all duration-300
+                            ${
+                              btn.images.length > 0
+                                ? "bg-gradient-to-r from-blue-500 to-green-500 text-white hover:scale-105"
+                                : "bg-gray-300 dark:bg-gray-700 text-gray-500 cursor-not-allowed"
+                            }
+                          `}
+                        >
+                          {btn.images.length > 0
+                            ? btn.text
+                            : `${btn.text} (Coming Soon)`}
+                        </button>
+                      ))}
+                    </div>
                   )}
+
                 </div>
               </div>
             )}
+
           </div>
 
           <br />
@@ -270,21 +364,60 @@ const Experience = () => {
               Experience Evidence
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-4 max-h-[70vh] overflow-y-auto">
-              {selectedImages.map((img, index) => (
-                <img
+            <div
+              className="
+                grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+                gap-5
+                max-h-[70vh]
+                overflow-y-auto
+                pr-2
+              "
+            >
+              {selectedImages.map((item, index) => (
+                <div
                   key={index}
-                  src={img}
-                  alt={`evidence-${index}`}
                   className="
-                    rounded-xl
+                    group
+                    overflow-hidden
+                    rounded-2xl
+                    bg-white dark:bg-gray-800
                     shadow-lg
-                    w-full
-                    object-cover
-                    hover:scale-[1.02]
-                    transition-all duration-300
+                    hover:shadow-2xl
+                    transition-all duration-500
+                    border border-gray-200 dark:border-gray-700
                   "
-                />
+                >
+                  <div className="overflow-hidden">
+                    <img
+                      src={item.src}
+                      alt={item.title}
+                      className="
+                        w-full
+                        h-52
+                        object-cover
+
+                        transition-all duration-500 ease-in-out
+
+                        group-hover:scale-110
+                        group-hover:brightness-110
+                      "
+                    />
+                  </div>
+
+                  <div className="p-4 text-left">
+                    <h3 className="font-semibold text-lg dark:text-white">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                      {item.desc}
+                    </p>
+
+                    <div className="mt-3 flex items-center gap-2 text-xs text-gray-400">
+                      <span>📸 Experience Documentation</span>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

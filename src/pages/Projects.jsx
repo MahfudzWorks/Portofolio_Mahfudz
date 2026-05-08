@@ -142,7 +142,7 @@ const Projects = () => {
 
     return (
     <section
-      id="Projects"
+      id="projects"
       className="relative flex flex-col justify-center items-center scroll-mt-20 px-4"
     >
       <h1 className="text-3xl font-bold text-black dark:text-white mt-14 transition-colors duration-300">
