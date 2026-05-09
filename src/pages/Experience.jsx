@@ -95,7 +95,13 @@ const Experience = () => {
       buttons: [
         {
           text: "View Certificate",
-          images: [],
+          images: [
+            {
+              src: "assets/Certificate/ESmpN28Gresik/SPelatihanPelatihPSNU.jpeg",
+              title: "Sertifikat Pelatihan Pelatih Pencak Silat Prestasi Pagar Nusa Gresik 2023",
+              desc: "Sertifikat peserta Pelatihan Pelatih Pencak Silat Prestasi Pagar Nusa Gresik Tahun 2023.",
+            }
+          ],
         },
 
         {
@@ -507,7 +513,7 @@ const Experience = () => {
         <div
           className="
             fixed inset-0 z-50
-            bg-black/70 backdrop-blur-sm
+            bg-black/80 backdrop-blur-md
             flex justify-center items-center
             p-4
           "
@@ -515,83 +521,139 @@ const Experience = () => {
           <div
             className="
               bg-white dark:bg-gray-900
-              rounded-2xl
+              rounded-3xl
               max-w-4xl w-full
               p-6
               relative
+              shadow-2xl
             "
           >
             <button
               onClick={() => setSelectedImages(null)}
               className="
-                absolute top-3 right-3
-                text-xl font-bold
-                text-gray-600 dark:text-white
+                absolute top-4 right-4
+                w-10 h-10
+                rounded-full
+                bg-gray-200 dark:bg-gray-800
+                hover:scale-110
+                transition-all
+                text-lg font-bold
+                text-gray-700 dark:text-white
               "
             >
               ✕
             </button>
 
-            <h2 className="text-2xl font-bold mb-4 dark:text-white">
+            <h2 className="text-3xl font-bold mb-6 dark:text-white">
               Experience Evidence
             </h2>
 
-            <div
-              className="
-                grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-                gap-5
-                max-h-[70vh]
-                overflow-y-auto
-                pr-2
-              "
-            >
-              {selectedImages.map((item, index) => (
-                <div
-                  key={index}
-                  className="
-                    group
-                    overflow-hidden
-                    rounded-2xl
-                    bg-white dark:bg-gray-800
-                    shadow-lg
-                    hover:shadow-2xl
-                    transition-all duration-500
-                    border border-gray-200 dark:border-gray-700
-                  "
-                >
-                  <div className="overflow-hidden">
-                    <img
-                      src={item.src}
-                      alt={item.title}
-                      className="
-                        w-full
-                        h-52
-                        object-cover
+            {selectedImages.length === 1 ? (
+              <div
+                className="
+                  overflow-hidden
+                  rounded-3xl
+                  bg-gradient-to-br
+                  from-gray-900
+                  to-black
+                  shadow-2xl
+                "
+              >
+                <div className="overflow-hidden p-4">
+                  <img
+                    src={selectedImages[0].src}
+                    alt={selectedImages[0].title}
+                    className="
+                      w-full
+                      max-h-[46vh]
+                      object-contain
+                      transition-all duration-700
+                      hover:scale-105
+                    "
+                  />
+                </div>
 
-                        transition-all duration-500 ease-in-out
+                <div className="p-6 text-white">
+                  <span
+                    className="
+                      inline-block
+                      px-4 py-1
+                      rounded-full
+                      text-sm
+                      bg-green-500/20
+                      border border-green-400
+                      mb-4
+                    "
+                  >
+                    📜 Certificate
+                  </span>
 
-                        group-hover:scale-110
-                        group-hover:brightness-110
-                      "
-                    />
-                  </div>
+                  <h3 className="text-2xl font-bold">
+                    {selectedImages[0].title}
+                  </h3>
 
-                  <div className="p-4 text-left">
-                    <h3 className="font-semibold text-lg dark:text-white">
-                      {item.title}
-                    </h3>
+                  <p className="text-gray-300 mt-3 leading-relaxed">
+                    {selectedImages[0].desc}
+                  </p>
+                </div>
+              </div>
+            ) : (
+  
+              <div
+                className="
+                  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+                  gap-5
+                  max-h-[70vh]
+                  overflow-y-auto
+                  pr-2
+                "
+              >
+                {selectedImages.map((item, index) => (
+                  <div
+                    key={index}
+                    className="
+                      group
+                      overflow-hidden
+                      rounded-2xl
+                      bg-white dark:bg-gray-800
+                      shadow-lg
+                      hover:shadow-2xl
+                      transition-all duration-500
+                      border border-gray-200 dark:border-gray-700
+                    "
+                  >
+                    <div className="overflow-hidden">
+                      <img
+                        src={item.src}
+                        alt={item.title}
+                        className="
+                          w-full
+                          h-52
+                          object-cover
+                          transition-all duration-500 ease-in-out
+                          group-hover:scale-110
+                          group-hover:brightness-110
+                        "
+                      />
+                    </div>
 
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                      {item.desc}
-                    </p>
+                    <div className="p-4 text-left">
+                      <h3 className="font-semibold text-lg dark:text-white">
+                        {item.title}
+                      </h3>
 
-                    <div className="mt-3 flex items-center gap-2 text-xs text-gray-400">
-                      <span>📸 Experience Documentation</span>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                        {item.desc}
+                      </p>
+
+                      <div className="mt-3 flex items-center gap-2 text-xs text-gray-400">
+                        <span>📸 Experience Documentation</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
