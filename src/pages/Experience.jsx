@@ -16,8 +16,6 @@ const Experience = () => {
         {
           text: "View Project",
           images: [
-            "assets/project/project1.png",
-            "assets/project/project2.png",
           ],
         },
 
@@ -29,8 +27,6 @@ const Experience = () => {
         {
           text: "View Documentation",
           images: [
-            "assets/documentation/doc1.jpg",
-            "assets/documentation/doc2.jpg",
           ],
         },
       ],
@@ -48,15 +44,73 @@ const Experience = () => {
         {
           text: "View Gallery",
           images: [
-            "assets/gallery/kartar1.jpg",
-            "assets/gallery/kartar2.jpg",
-          ],
-        },
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar1.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Foto bersama salah satu anggota Karang Taruna yang akan menampilkan pentas seni jaranan dalam acara peringatan HUT RI 2025.",
+            },
 
-        {
-          text: "View Documentation",
-          images: [],
-        },
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar2.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Foto bersama seluruh anggota Karang Taruna setelah sukses melaksanakan acara peringatan HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar3.jpeg",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Foto kebersamaan anggota Karang Taruna generasi baru dan generasi lama dalam acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar4.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan ibu-ibu PKK dalam rangka memeriahkan acara peringatan HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar5.jpeg",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan adik-adik laki-laki Dusun Balongmojo yang membawakan tarian modern pada acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar6.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan adik-adik perempuan Dusun Balongmojo yang membawakan tarian modern dalam acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar7.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan pembacaan puisi oleh adik-adik dalam rangka memeriahkan acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar8.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan tarian oleh remaja perempuan dalam acara peringatan HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar9.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan tari hiburan bertema lucu oleh remaja laki-laki untuk memeriahkan acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar10.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan kesenian pencak silat jurus tunggal oleh remaja laki-laki dalam acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar11.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan tari hiburan 'kewer-kewer' oleh remaja laki-laki dalam rangka memeriahkan acara HUT RI 2025.",
+            },
+          ],
+        }
       ],
     },
 
@@ -72,8 +126,6 @@ const Experience = () => {
         {
           text: "View Project",
           images: [
-            "assets/project/vyyy1.png",
-            "assets/project/vyyy2.png",
           ],
         },
 
