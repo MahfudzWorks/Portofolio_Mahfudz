@@ -124,6 +124,35 @@ const Experience = () => {
               title: "Juara O2SN Pencak Silat 2024",
               desc: "Prestasi siswa dalam ajang Olimpiade Olahraga Siswa Nasional (O2SN) 2024.",
             },
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi5.jpg",
+              title: "Juara 2 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi6.jpg",
+              title: "Juara 3 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi7.jpg",
+              title: "Juara 3 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi8.jpg",
+              title: "Juara 3 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi9.jpg",
+              title: "Juara 3 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
+            },
           ],
         },
       ],
@@ -154,14 +183,155 @@ const Experience = () => {
         {
           text: "View Gallery",
           images: [
-            "assets/documentation/doc1.jpg",
-            "assets/documentation/doc2.jpg",
+            {
+              src: "assets/Gallery/ETjiwiKimia/pembukaan_magang.jpeg",
+              title: "Pembukaan Program Magang",
+              desc: "Kegiatan pembukaan program magang sebagai awal pelaksanaan kegiatan internship di perusahaan.",
+            },
+
+            {
+              src: "assets/Gallery/ETjiwiKimia/jamuan_magang.jpeg",
+              title: "Jamuan Peserta Magang",
+              desc: "Kegiatan penyambutan dan jamuan peserta magang oleh pihak perusahaan.",
+            },
+
+            {
+              src: "assets/Gallery/ETjiwiKimia/pengenalan_k3.jpeg",
+              title: "Pengenalan K3 dan 6S",
+              desc: "Pengenalan budaya keselamatan kerja (K3) serta penerapan prinsip 6S di area operasional produksi.",
+            },
+
+            {
+              src: "assets/Gallery/ETjiwiKimia/mentor_stationery_pad.jpeg",
+              title: "Pengenalan Mentor Stationery Pad",
+              desc: "Kegiatan pengenalan mentor dan pembimbing kerja pada bagian Stationery Pad.",
+            },
+
+            {
+              src: "assets/Gallery/ETjiwiKimia/kepala_bagian_stationery_pad.jpeg",
+              title: "Pengenalan Kepala Bagian Stationery Pad",
+              desc: "Pengenalan kepala bagian Stationery Pad serta penjelasan alur kerja divisi.",
+            },
+
+            {
+              src: "assets/Gallery/ETjiwiKimia/pembelajaran_lapangan1.jpeg",
+              title: "Pembelajaran Lapangan Material Mesin",
+              desc: "Kegiatan pembelajaran lapangan mengenai size part dan material pada mesin produksi.",
+            },
+
+            {
+              src: "assets/Gallery/ETjiwiKimia/pembelajaran_lapangan2.jpeg",
+              title: "Pembelajaran Lapangan Mesin Produksi",
+              desc: "Kegiatan pembelajaran langsung mengenai operasional dan proses kerja mesin produksi.",
+            },
+
+            {
+              src: "assets/Gallery/ETjiwiKimia/kebersamaan_ematerial.jpeg",
+              title: "Kebersamaan Karyawan E-Material",
+              desc: "Dokumentasi kebersamaan bersama karyawan pada bagian E-Material selama kegiatan magang.",
+            },
+
+            {
+              src: "assets/Gallery/ETjiwiKimia/halalbihalal_karyawan.jpeg",
+              title: "Halal Bihalal Bersama Karyawan",
+              desc: "Kegiatan kebersamaan dan silaturahmi bersama karyawan dalam rangka halal bihalal perusahaan.",
+            },
           ],
         },
 
         {
           text: "View Documentation",
-          images: [],
+          images: [
+            {
+              src: "assets/Documentation/ETjiwiKimia/undwind.jpg",
+              title: "Proses Undwind",
+              desc: "Proses pemasangan dan pengaturan base paper roll sebelum masuk ke unit printing pada mesin Legal Pad.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/paperguide.jpg",
+              title: "Paper Guide",
+              desc: "Penggunaan paper guide untuk menjaga kestabilan dan posisi kertas sebelum proses printing.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/printing.jpg",
+              title: "Unit Printing",
+              desc: "Proses pencetakan garis buku (rulling) pada kertas menggunakan unit printing mesin Legal Pad.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/perforasi.jpg",
+              title: "Proses Perforasi",
+              desc: "Proses pelubangan kertas menggunakan perforasi untuk mempermudah penyobekan kertas.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/crosscutter.jpg",
+              title: "Cross Cutter",
+              desc: "Proses pemotongan kertas menjadi ukuran plano atau strip sesuai kebutuhan produksi.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/overlapping.jpg",
+              title: "Overlapping Process",
+              desc: "Proses transfer hasil potongan kertas menuju collecting dengan jarak overlap yang stabil.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/collecting.jpg",
+              title: "Collecting",
+              desc: "Proses penghitungan dan pengaturan jumlah inner sheet sesuai format produksi buku.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/feeder.jpg",
+              title: "Feeder Front & Back",
+              desc: "Proses pengeluaran cover secara otomatis menuju meja transport produksi.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/stripcutting.jpg",
+              title: "Strip Cutting",
+              desc: "Proses pemotongan large sheet menjadi ukuran strip sesuai SPK produksi.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/stitching.jpg",
+              title: "Stitching Process",
+              desc: "Proses penjilidan menggunakan kawat untuk menyatukan lembaran menjadi buku Legal Pad.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/backtape.jpg",
+              title: "Back Tape Process",
+              desc: "Proses penutupan bagian atas buku menggunakan tape untuk memperkuat hasil stitching.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/etiket.jpeg",
+              title: "Pemeriksaan Etiket Produksi",
+              desc: "Pengecekan etiket produk untuk memastikan informasi produksi sesuai standar dan kebutuhan produksi.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/spk_qc.jpeg",
+              title: "SPK Penolakan QC",
+              desc: "Dokumentasi Surat Perintah Kerja (SPK) penolakan quality control terhadap produk yang tidak sesuai standar.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/qc_activity.jpeg",
+              title: "Kegiatan Quality Control",
+              desc: "Aktivitas pengecekan kualitas produk selama proses produksi untuk menjaga mutu hasil produksi.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/report_daily.jpeg",
+              title: "Pembuatan Laporan Harian Magang",
+              desc: "Kegiatan pembuatan laporan harian setelah pelaksanaan magang sebagai dokumentasi aktivitas dan hasil pekerjaan setiap hari.",
+            },
+          ],
         },
       ],
     },
