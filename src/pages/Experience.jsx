@@ -102,6 +102,12 @@ const Experience = () => {
           text: "View Gallery",
           images: [
             {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi4.jpg",
+              title: "Juara O2SN Pencak Silat 2024",
+              desc: "Prestasi siswa dalam ajang Olimpiade Olahraga Siswa Nasional (O2SN) 2024.",
+            },
+            
+            {
               src: "assets/Gallery/ESmpN28Gresik/prestasi1.jpg",
               title: "Juara 1 Pencak Silat Grisse 2024",
               desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
@@ -119,37 +125,33 @@ const Experience = () => {
               desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
             },
 
+            
             {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi4.jpg",
-              title: "Juara O2SN Pencak Silat 2024",
-              desc: "Prestasi siswa dalam ajang Olimpiade Olahraga Siswa Nasional (O2SN) 2024.",
-            },
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi5.jpg",
+              src: "assets/Gallery/ESmpN28Gresik/prestasi5.jpeg",
               title: "Juara 2 Pencak Silat Grisse 2025",
               desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
             },
 
             {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi6.jpg",
+              src: "assets/Gallery/ESmpN28Gresik/prestasi6.jpeg",
               title: "Juara 3 Pencak Silat Grisse 2025",
               desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
             },
 
             {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi7.jpg",
+              src: "assets/Gallery/ESmpN28Gresik/prestasi7.jpeg",
               title: "Juara 3 Pencak Silat Grisse 2025",
               desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
             },
 
             {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi8.jpg",
+              src: "assets/Gallery/ESmpN28Gresik/prestasi8.jpeg",
               title: "Juara 3 Pencak Silat Grisse 2025",
               desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
             },
 
             {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi9.jpg",
+              src: "assets/Gallery/ESmpN28Gresik/prestasi9.jpeg",
               title: "Juara 3 Pencak Silat Grisse 2025",
               desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
             },
