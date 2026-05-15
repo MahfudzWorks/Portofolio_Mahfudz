@@ -18,20 +18,15 @@ const Home = () => {
         </h1>
       </div>
 
-      <p className="text-gray-700 dark:text-gray-300 mt-3 sm:mt-4 leading-relaxed text-center text-sm sm:text-base px-12">
-          Saya adalah lulusan S1 Teknik Informatika Universitas Muhammadiyah Gresik yang memiliki minat besar
-          dalam pengembangan sistem digital dan pengolahan data. Mampu berkomunikasi dengan baik, bekerja dalam
-          tim, serta beradaptasi dengan cepat di lingkungan baru. Selama menempuh pendidikan di bidang teknik
-          informatika, memiliki ketertarikan pada proses industri teknologi serta memperoleh pengetahuan melalui
-          pengalaman magang, organisasi, studi kasus, dan pembelajaran terkait seperti pengembangan website berbasis
-          laravel, pengelolaan administrasi organisasi, serta menjalankan usaha jasa di bidang akademik dan digital.
-          Memiliki ketertarikan dalam pengembangan solusi berbasis teknologi dan terus berupaya meningkatkan
-          kemampuan di bidang IT. ✨
-        </p>
+      <p className="text-gray-700 dark:text-gray-300 mt-3 sm:m-6 leading-relaxed text-center text-sm sm:text-base px-12">
+        Saya adalah lulusan S1 Teknik Informatika Universitas Muhammadiyah Gresik yang memiliki minat pada
+        pengembangan sistem digital, pengolahan data, teknologi industri, serta administrasi berbasis digital.
+        Memiliki pengalaman dalam pengembangan website, pengelolaan administrasi organisasi, serta project
+        berbasis IT dengan kemampuan adaptasi, komunikasi, dan kerja sama tim yang baik. ✨
+      </p>
 
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 justify-center w-full sm:w-auto">
         
-        {/* BUTTON 1 */}
         <a
           href="#contact"
           className="p-[2px] bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] rounded-3xl inline-block"
@@ -50,7 +45,6 @@ const Home = () => {
           </div>
         </a>
 
-        {/* BUTTON 2 */}
         <a
           href="CV_Mahfudz_Alfanani_Syaviqi.pdf"
           download
@@ -71,7 +65,6 @@ const Home = () => {
         </a>
       </div>
 
-      {/* SOCIAL */}
       <div className="flex justify-center gap-3 sm:gap-4 mt-6 flex-wrap">
         {[
           {
