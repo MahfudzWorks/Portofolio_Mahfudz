@@ -105,7 +105,7 @@ const Experience = () => {
             },
 
             {
-              src: "assets/Gallery/EKartarDSNBM/kartar11.webp",
+              src: "assets/Gallery/EKartarDSNBM/kartar11.webp ",
               title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
               desc: "Penampilan tari hiburan 'kewer-kewer' oleh remaja laki-laki dalam rangka memeriahkan acara HUT RI 2025.",
             },
@@ -234,7 +234,7 @@ const Experience = () => {
       ],
       position: "left",
 
-      buttons: [
+       buttons: [
         {
           text: "View Certificate",
           images: [],
@@ -372,6 +372,12 @@ const Experience = () => {
               src: "assets/Documentation/ETjiwiKimia/etiket.jpeg",
               title: "Pemeriksaan Etiket Produksi",
               desc: "Pengecekan etiket produk untuk memastikan informasi produksi sesuai standar dan kebutuhan produksi.",
+            },
+
+            {
+              src: "assets/Documentation/ETjiwiKimia/mesin-perhitungan-etiket.jpeg",
+              title: "Mesin Perhitungan Etiket",
+              desc: "Penggunaan mesin perhitungan etiket untuk membantu proses penghitungan jumlah etiket produksi agar lebih cepat, akurat, dan efisien.",
             },
 
             {
@@ -597,7 +603,7 @@ const Experience = () => {
             </button>
 
             <h2 className="text-3xl font-bold mb-6 dark:text-white">
-              Experience Evidence
+              📚 Experience 
             </h2>
 
             {selectedImages.length === 1 ? (
