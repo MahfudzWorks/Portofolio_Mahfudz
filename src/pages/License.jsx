@@ -3,6 +3,62 @@ import {useState} from 'react'
 const License = () => {
   const licenses = [
     {
+      title: "Essential Skills Adaptability",
+      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
+      date: "2026",
+      img: "assets/Certificate/Essential Skills Adaptability.jpg",
+      link: "https://drive.google.com/file/d/18cjwTF7hui55I6XdDjVXlbrrPF9SlNPl/view?usp=sharing",
+    },
+
+    {
+      title: "Essential Skills Digital Disruption & Transformation",
+      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
+      date: "2026",
+      img: "assets/Certificate/Essential Skills Digital Disruption & Transformation.svg",
+      link: "https://drive.google.com/file/d/18cjwTF7hui55I6XdDjVXlbrrPF9SlNPl/view?usp=sharing",
+    },
+
+    {
+      title: "Essential Skills Digital Disruption & Transformation",
+      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
+      date: "2026",
+      img: "assets/Certificate/Essential Skills Digital Disruption & Transformation.svg",
+      link: "https://drive.google.com/file/d/18cjwTF7hui55I6XdDjVXlbrrPF9SlNPl/view?usp=sharing",
+    },
+
+    {
+      title: "Essential Skills Digital Literacy",
+      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
+      date: "2026",
+      img: "assets/Certificate/Essential Skills Digital Literacy.svg",
+      link: "https://drive.google.com/file/d/1-HtlqWeQRfH20LRnaHZZnBB0l5L3OZwF/view?usp=sharing",
+    },
+
+    {
+      title: "Essential Skills Emotional Intelligence",
+      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
+      date: "2026",
+      img: "assets/Certificate/Essential Skills Emotional Intelligence.svg",
+      link: "https://drive.google.com/file/d/1D1iEhC7ATIgjpfRtU30H9GVw51SKz_Z0/view?usp=sharing",
+    },
+
+    {
+      title: "Essential Skills Integrity at Work",
+      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
+      date: "2026",
+      img: "assets/Certificate/Essential Skills Integrity at Work.svg",
+      link: "https://drive.google.com/file/d/1BvHbNCSjlgua45ZvzO7qQcWGnhEJZ_U9/view?usp=sharing",
+    },
+
+    {
+      title: "Essential Skills Self Efficacy",
+      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
+      date: "2026",
+      img: "assets/Certificate/Essential Skills Self Efficacy.svg",
+      link: "https://drive.google.com/file/d/145g2G963nhbz8koL0nVO8QMtuIegP3u7/view?usp=sharing",
+    },
+
+    {
       title: "Author",
       org: "Jurnal Nasional Komputasi dan Teknologi Informasi (JNKTI)",
       date: "2024",
@@ -44,41 +100,6 @@ const License = () => {
       date: "2025",
       img: "assets/Certificate/Certificate Sonder 2025  Designing a Future that Lasts.svg",
       link: "https://drive.google.com/file/d/1E8VmszEliSIyJZQpkB8md-RbpU87PfQ8/view?usp=drive_link",
-    },
-    {
-      title: "Essential Skills Digital Disruption & Transformation",
-      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
-      date: "2026",
-      img: "assets/Certificate/Essential Skills Digital Disruption & Transformation.svg",
-      link: "https://drive.google.com/file/d/18cjwTF7hui55I6XdDjVXlbrrPF9SlNPl/view?usp=sharing",
-    },
-    {
-      title: "Essential Skills Digital Literacy",
-      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
-      date: "2026",
-      img: "assets/Certificate/Essential Skills Digital Literacy.svg",
-      link: "https://drive.google.com/file/d/1-HtlqWeQRfH20LRnaHZZnBB0l5L3OZwF/view?usp=sharing",
-    },
-    {
-      title: "Essential Skills Emotional Intelligence",
-      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
-      date: "2026",
-      img: "assets/Certificate/Essential Skills Emotional Intelligence.svg",
-      link: "https://drive.google.com/file/d/1D1iEhC7ATIgjpfRtU30H9GVw51SKz_Z0/view?usp=sharing",
-    },
-    {
-      title: "Essential Skills Integrity at Work",
-      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
-      date: "2026",
-      img: "assets/Certificate/Essential Skills Integrity at Work.svg",
-      link: "https://drive.google.com/file/d/1BvHbNCSjlgua45ZvzO7qQcWGnhEJZ_U9/view?usp=sharing",
-    },
-    {
-      title: "Essential Skills Self Efficacy",
-      org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
-      date: "2026",
-      img: "assets/Certificate/Essential Skills Self Efficacy.svg",
-      link: "https://drive.google.com/file/d/145g2G963nhbz8koL0nVO8QMtuIegP3u7/view?usp=sharing",
     },
   ];
 
