@@ -3,6 +3,7 @@ import { useState } from "react";
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [submittedMessage, setSubmittedMessage] = useState("");
 
   const handleWhatsApp = (e) => {
     e.preventDefault();
@@ -11,7 +12,11 @@ const Contact = () => {
 
     const text = `Halo, ini pesan dari portfolio!\n\nEmail: ${email}\nPesan: ${message}`;
 
+    // tampilkan pesan di layar
+    setSubmittedMessage(text);
+
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
     window.open(url, "_blank");
   };
 
@@ -87,6 +92,7 @@ const Contact = () => {
               "
             >
               Send via WhatsApp
+
               <img
                 src="assets/icon/WhatsappLogo.svg"
                 alt="WA"
@@ -95,11 +101,40 @@ const Contact = () => {
             </button>
           </div>
         </form>
+
+        {/* Preview Pesan */}
+        {submittedMessage && (
+          <div
+            className="
+              mt-8 w-full max-w-xl mx-auto
+              bg-white dark:bg-gray-900
+              border border-gray-200 dark:border-gray-700
+              rounded-2xl p-5 shadow-xl
+              text-left
+              animate-fadeIn
+            "
+          >
+            <h2 className="text-lg font-bold text-green-600 dark:text-green-400 mb-3">
+              Preview Pesan
+            </h2>
+
+            <pre
+              className="
+                whitespace-pre-wrap
+                text-gray-700 dark:text-gray-300
+                text-sm sm:text-base
+                leading-relaxed
+              "
+            >
+              {submittedMessage}
+            </pre>
+          </div>
+        )}
       </div>
 
       <div className="h-24 sm:h-32" />
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
