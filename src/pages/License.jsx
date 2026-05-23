@@ -3,6 +3,14 @@ import {useState} from 'react'
 const License = () => {
   const licenses = [
     {
+      title: "Data Science Introduction",
+      org: "MySkill Short Class",
+      date: "May 12th, 2026",
+      img: "assets/Certificate/DataScienceIntroduction.jpg",
+      link: "https://drive.google.com/file/d/1fzCxYQnG6LpHqjkEz3dQj_f4YqK3pW3y/view?usp=drive_link",
+    },
+
+    {
       title: "Essential Skills Adaptability",
       org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
       date: "2026",
