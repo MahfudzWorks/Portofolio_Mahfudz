@@ -17,11 +17,25 @@ const Contact = () => {
     return saved ? JSON.parse(saved) : [];
   });
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
   useEffect(() => {
     localStorage.setItem(
       "messages",
       JSON.stringify(submittedMessages)
     );
+  }, [submittedMessages]);
+
+  useEffect(() => {
+    if (submittedMessages.length === 0) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prev) =>
+        (prev + 1) % submittedMessages.length
+      );
+    }, 2500);
+
+    return () => clearInterval(interval);
   }, [submittedMessages]);
 
   const handleWhatsApp = (e) => {
@@ -36,13 +50,11 @@ const Contact = () => {
       email,
       message,
       color: randomColor,
-
-      top: Math.floor(Math.random() * 250),
-
-      duration: 10 + Math.floor(Math.random() * 8),
     };
 
-    setSubmittedMessages((prev) => [...prev, newMessage]);
+    setSubmittedMessages((prev) =>
+      [...prev, newMessage].slice(-8)
+    );
 
     const text = `Halo, ini pesan dari portfolio!\n\nEmail: ${email}\nPesan: ${message}`;
 
@@ -69,7 +81,7 @@ const Contact = () => {
       <h1 className="text-3xl font-bold mt-6 text-center">
         <span className="inline-block animate-bounce">📩</span>
         {" "}Contact Me{" "}
-        <span className="inline-block animate-ping">🤝</span>
+        <span className="inline-block animate-pulse">🤝</span>
       </h1>
 
       <div className="text-center max-w-3xl w-full mt-4 px-4 sm:px-0">
@@ -147,54 +159,61 @@ const Contact = () => {
         </form>
 
         {submittedMessages.length > 0 && (
-          <div className="relative mt-12 w-screen overflow-hidden h-[120px] left-1/2 -translate-x-1/2">   
+          <div className="mt-12 h-[120px] flex items-center justify-center overflow-hidden px-4">
 
-            {submittedMessages.map((item, index) => (
-              <div
-                key={index}
-                className={`
-                  absolute
-                  whitespace-nowrap
-                  text-lg sm:text-2xl
-                  font-bold
-                  bg-gradient-to-r ${item.color}
-                  bg-clip-text text-transparent
-                  animate-runningText
-                `}
-                style={{
-                  top: `${item.top}px`,
-                  animationDuration: `${item.duration}s`,
-                  animationDelay: `${index * 0.5}s`,
-                }}
-              >
-                ✨ {item.message}
-              </div>
-            ))}
+            <div
+              key={activeIndex}
+              className={`
+                animate-messagePop
+                text-center
+                text-lg sm:text-2xl
+                font-bold
+                bg-gradient-to-r ${submittedMessages[activeIndex].color}
+                bg-clip-text text-transparent
+              `}
+            >
+              ✨ {submittedMessages[activeIndex].message}
+            </div>
 
           </div>
         )}
       </div>
 
       <style jsx>{`
-        @keyframes runningText {
+        @keyframes messagePop {
           0% {
-            transform: translateX(120vw);
+            opacity: 0;
+            transform: scale(0.7) translateY(20px);
+          }
+
+          15% {
+            opacity: 1;
+            transform: scale(1.05) translateY(0);
+          }
+
+          30% {
+            transform: scale(1);
+          }
+
+          85% {
+            opacity: 1;
+            transform: scale(1);
           }
 
           100% {
-            transform: translateX(-150vw);
+            opacity: 0;
+            transform: scale(0.8) translateY(-10px);
           }
         }
 
-        .animate-runningText {
-          animation-name: runningText;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-          will-change: transform;
+        .animate-messagePop {
+          animation: messagePop 2.5s ease-in-out;
+          will-change: transform, opacity;
+          backface-visibility: hidden;
         }
       `}</style>
 
-      <div className="h-10 sm:h-16" />
+      <div className="h-4 sm:h-6" />
     </section>
   );
 };

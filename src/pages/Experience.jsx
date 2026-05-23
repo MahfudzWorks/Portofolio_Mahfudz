@@ -237,7 +237,13 @@ const Experience = () => {
        buttons: [
         {
           text: "View Certificate",
-          images: [],
+          images: [
+            {
+              src: "assets/Certificate/ETjiwiKimia/SMagangTjiwiKimia.jpg",
+              title: "Sertifikat Magang PT Pabrik Kertas Tjiwi Kimia Tbk",
+              desc: "Sertifikat program magang di PT Pabrik Kertas Tjiwi Kimia Tbk pada divisi Stationery-PAD sebagai bentuk pengalaman kerja dan pengembangan kemampuan di bidang produksi, administrasi, serta quality control.",
+            }
+          ],
         },
 
         {
