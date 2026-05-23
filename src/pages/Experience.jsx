@@ -5,220 +5,6 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: "Software Developer",
-      company: "CV. Fintechnology Consultant Indonesian",
-      date: "08/2024 - 12/2024",
-      description:
-        "Bertanggung jawab dalam pengembangan sistem digital, termasuk pembuatan website ecommerce menggunakan framework Laravel, mulai dari proses frontend, backend, hingga testing.",
-      position: "left",
-
-      buttons: [
-        {
-          text: "View Project",
-          images: [
-          ],
-        },
-
-        {
-          text: "View Certificate",
-          images: [],
-        },
-
-        {
-          text: "View Documentation",
-          images: [
-          ],
-        },
-      ],
-    },
-
-    {
-      title: "Sekretaris dan Bendahara Organisasi",
-      company: "Karang Taruna Balongmojo",
-      date: "08/2021 - 08/2026",
-      description:
-        "Bertugas mencatat pemasukan dan pengeluaran keuangan organisasi, menyusun surat undangan, proposal sponsor, serta mengelola administrasi untuk mendukung kelancaran kegiatan Kartar.",
-      position: "right",
-
-      buttons: [
-        {
-          text: "View Gallery",
-          images: [
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar1.webp",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Foto bersama salah satu anggota Karang Taruna yang akan menampilkan pentas seni jaranan dalam acara peringatan HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar2.webp",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Foto bersama seluruh anggota Karang Taruna setelah sukses melaksanakan acara peringatan HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar3.jpeg",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Foto kebersamaan anggota Karang Taruna generasi baru dan generasi lama dalam acara HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar4.webp",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Penampilan ibu-ibu PKK dalam rangka memeriahkan acara peringatan HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar5.jpeg",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Penampilan adik-adik laki-laki Dusun Balongmojo yang membawakan tarian modern pada acara HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar6.webp",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Penampilan adik-adik perempuan Dusun Balongmojo yang membawakan tarian modern dalam acara HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar7.webp",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Penampilan pembacaan puisi oleh adik-adik dalam rangka memeriahkan acara HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar8.webp",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Penampilan tarian oleh remaja perempuan dalam acara peringatan HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar9.webp",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Penampilan tari hiburan bertema lucu oleh remaja laki-laki untuk memeriahkan acara HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar10.webp",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Penampilan kesenian pencak silat jurus tunggal oleh remaja laki-laki dalam acara HUT RI 2025.",
-            },
-
-            {
-              src: "assets/Gallery/EKartarDSNBM/kartar11.webp ",
-              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
-              desc: "Penampilan tari hiburan 'kewer-kewer' oleh remaja laki-laki dalam rangka memeriahkan acara HUT RI 2025.",
-            },
-          ],
-        }
-      ],
-    },
-
-    {
-      title: "Owner",
-      company: "Jasa Joki Tugas Vyyy",
-      date: "01/2022 - 08/2025",
-      description:
-        "Mendirikan dan mengelola layanan jasa pembuatan tugas akademik dan non-akademik, meliputi penulisan makalah, pengolahan data Excel, desain presentasi PowerPoint, serta pembuatan website dan desain grafis.",
-      position: "left",
-
-      buttons: [
-        {
-          text: "View Project",
-          images: [
-          ],
-        },
-
-        {
-          text: "View Gallery",
-          images: [],
-        },
-      ],
-    },
-
-    {
-      title: "Guru Ekstrakurikuler",
-      company: "SMP Negeri 28 Gresik",
-      date: "08/2023 - 08/2025",
-      description:
-        "Mengajar ekstrakurikuler pencak silat sebagai upaya pengembangan minat dan bakat siswa.",
-      position: "right",
-
-      buttons: [
-        {
-          text: "View Certificate",
-          images: [
-            {
-              src: "assets/Certificate/ESmpN28Gresik/SPelatihanPelatihPSNU.jpeg",
-              title: "Sertifikat Pelatihan Pelatih Pencak Silat Prestasi Pagar Nusa Gresik 2023",
-              desc: "Sertifikat peserta Pelatihan Pelatih Pencak Silat Prestasi Pagar Nusa Gresik Tahun 2023.",
-            }
-          ],
-        },
-
-        {
-          text: "View Gallery",
-          images: [
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi4.jpg",
-              title: "Juara O2SN Pencak Silat 2024",
-              desc: "Prestasi siswa dalam ajang Olimpiade Olahraga Siswa Nasional (O2SN) 2024.",
-            },
-            
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi1.jpg",
-              title: "Juara 1 Pencak Silat Grisse 2024",
-              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
-            },
-
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi2.jpg",
-              title: "Juara 2 Pencak Silat Grisse 2024",
-              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
-            },
-
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi3.jpg",
-              title: "Juara 3 Pencak Silat Grisse 2024",
-              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
-            },
-
-            
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi5.jpeg",
-              title: "Juara 2 Pencak Silat Grisse 2025",
-              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
-            },
-
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi6.jpeg",
-              title: "Juara 3 Pencak Silat Grisse 2025",
-              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
-            },
-
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi7.jpeg",
-              title: "Juara 3 Pencak Silat Grisse 2025",
-              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
-            },
-
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi8.jpeg",
-              title: "Juara 3 Pencak Silat Grisse 2025",
-              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
-            },
-
-            {
-              src: "assets/Gallery/ESmpN28Gresik/prestasi9.jpeg",
-              title: "Juara 3 Pencak Silat Grisse 2025",
-              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
-            },
-          ],
-        },
-      ],
-    },
-
-    {
       title: "Operator – Stationery Pad",
       company: "PT Pabrik Kertas Tjiwi Kimia Tbk (Internship Kemnaker)",
       date: "11/2025 - 05/2026",
@@ -402,6 +188,245 @@ const Experience = () => {
               src: "assets/Documentation/ETjiwiKimia/report_daily.jpeg",
               title: "Pembuatan Laporan Harian Magang",
               desc: "Kegiatan pembuatan laporan harian setelah pelaksanaan magang sebagai dokumentasi aktivitas dan hasil pekerjaan setiap hari.",
+            },
+          ],
+        },
+      ],
+    },
+    
+    {
+      title: "Software Developer",
+      company: "CV. Fintechnology Consultant Indonesian",
+      date: "08/2024 - 12/2024",
+      list: [
+        "Mengembangkan sistem berbasis website menggunakan framework Laravel (frontend dan backend)",
+        "Memahami alur pengembangan perangkat lunak mulai dari perancangan, implementasi, hingga pengujian sistem",
+        "Berkontribusi dalam pembuatan website e-commerce sesuai kebutuhan pengguna",
+        "Melakukan debugging dan pengujian untuk memastikan sistem berjalan dengan optimal",
+        "Berkolaborasi dalam tim untuk menyelesaikan pengembangan sistem sesuai target",
+        "Meningkatkan pemahaman dalam pengembangan web, pengelolaan database, dan logika pemrograman",
+      ],
+      position: "right",
+
+      buttons: [
+        {
+          text: "View Project",
+          images: [
+          ],
+        },
+
+        {
+          text: "View Certificate",
+          images: [],
+        },
+
+        {
+          text: "View Documentation",
+          images: [
+          ],
+        },
+      ],
+    },
+
+    {
+      title: "Owner",
+      company: "Jasa Joki Tugas Vyyy",
+      date: "01/2022 - 08/2025",
+      list: [
+        "Mengelola berbagai tugas administrasi seperti makalah, KTI, presentasi, entri, dan pengolahan data secara rapi dan terstruktur",
+        "Membuat serta mengedit dokumen kreatif seperti undangan, buku anak-anak, dan materi visual menggunakan Canva",
+        "Menangani komunikasi dengan klien mulai dari penerimaan tugas, revisi, hingga penyelesaian tepat waktu",
+        "Mendukung pembuatan dan pengembangan website menggunakan berbagai teknologi sesuai kebutuhan",
+        "Melakukan pengecekan dan perbaikan dokumen (proofreading) untuk memastikan kualitas hasil kerja",
+      ],
+      position: "left",
+
+      buttons: [
+        {
+          text: "View Project",
+          images: [
+          ],
+        },
+
+        {
+          text: "View Gallery",
+          images: [],
+        },
+      ],
+    },
+
+    {
+      title: "Sekretaris dan Bendahara Organisasi",
+      company: "Karang Taruna Balongmojo",
+      date: "08/2021 - 08/2026",
+      list: [
+        "Berperan sebagai pengelola administrasi dan penggerak kegiatan organisasi",
+        "Menyusun surat undangan, proposal kegiatan, serta laporan administrasi",
+        "Mengelola dan mencatat pemasukan serta pengeluaran keuangan organisasi",
+        "Berkoordinasi dengan anggota dalam menjalankan kegiatan sosial masyarakat",
+        "Menunjukkan kemampuan manajemen organisasi, komunikasi, dan tanggung jawab dalam menjalankan program kerja",
+      ],
+      position: "right",
+
+      buttons: [
+        {
+          text: "View Gallery",
+          images: [
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar1.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Foto bersama salah satu anggota Karang Taruna yang akan menampilkan pentas seni jaranan dalam acara peringatan HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar2.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Foto bersama seluruh anggota Karang Taruna setelah sukses melaksanakan acara peringatan HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar3.jpeg",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Foto kebersamaan anggota Karang Taruna generasi baru dan generasi lama dalam acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar4.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan ibu-ibu PKK dalam rangka memeriahkan acara peringatan HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar5.jpeg",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan adik-adik laki-laki Dusun Balongmojo yang membawakan tarian modern pada acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar6.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan adik-adik perempuan Dusun Balongmojo yang membawakan tarian modern dalam acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar7.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan pembacaan puisi oleh adik-adik dalam rangka memeriahkan acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar8.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan tarian oleh remaja perempuan dalam acara peringatan HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar9.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan tari hiburan bertema lucu oleh remaja laki-laki untuk memeriahkan acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar10.webp",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan kesenian pencak silat jurus tunggal oleh remaja laki-laki dalam acara HUT RI 2025.",
+            },
+
+            {
+              src: "assets/Gallery/EKartarDSNBM/kartar11.webp ",
+              title: "Acara Karang Taruna dalam Rangka HUT RI 2025",
+              desc: "Penampilan tari hiburan 'kewer-kewer' oleh remaja laki-laki dalam rangka memeriahkan acara HUT RI 2025.",
+            },
+          ],
+        }
+      ],
+    },
+
+    {
+      title: "Sekretaris & Guru Ekstrakurikuler",
+      company: "Pagar Nusa (PAC Benjeng & Ranting Balongmojo)",
+      date: "05/2023 - Sekarang",
+      description:
+        "Berperan sebagai sekretaris organisasi sekaligus guru ekstrakurikuler pencak silat dalam mendukung administrasi, pelaksanaan kegiatan, serta pengembangan minat dan bakat anggota.",
+      position: "left",
+
+      list: [
+        "Mengelola administrasi organisasi seperti surat-menyurat, proposal, dan dokumentasi kegiatan",
+        "Menyusun laporan kegiatan dan mendukung perencanaan program kerja organisasi",
+        "Berkoordinasi dengan pengurus dan anggota dalam pelaksanaan kegiatan",
+        "Mengajar ekstrakurikuler pencak silat untuk pengembangan kemampuan dan disiplin anggota",
+        "Dipercaya menjadi Ketua kegiatan Ujian Kenaikan Tingkat (UKT)",
+        "Mengembangkan kemampuan kepemimpinan, komunikasi, dan manajemen organisasi",
+      ],
+
+      buttons: [
+        {
+          text: "View Certificate",
+          images: [
+            {
+              src: "assets/Certificate/ESmpN28Gresik/SPelatihanPelatihPSNU.jpeg",
+              title: "Sertifikat Pelatihan Pelatih Pencak Silat Prestasi Pagar Nusa Gresik 2023",
+              desc: "Sertifikat peserta Pelatihan Pelatih Pencak Silat Prestasi Pagar Nusa Gresik Tahun 2023.",
+            }
+          ],
+        },
+
+        {
+          text: "View Gallery",
+          images: [
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi4.jpg",
+              title: "Juara O2SN Pencak Silat 2024",
+              desc: "Prestasi siswa dalam ajang Olimpiade Olahraga Siswa Nasional (O2SN) 2024.",
+            },
+            
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi1.jpg",
+              title: "Juara 1 Pencak Silat Grisse 2024",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi2.jpg",
+              title: "Juara 2 Pencak Silat Grisse 2024",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi3.jpg",
+              title: "Juara 3 Pencak Silat Grisse 2024",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2024.",
+            },
+
+            
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi5.jpeg",
+              title: "Juara 2 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi6.jpeg",
+              title: "Juara 3 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi7.jpeg",
+              title: "Juara 3 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi8.jpeg",
+              title: "Juara 3 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
+            },
+
+            {
+              src: "assets/Gallery/ESmpN28Gresik/prestasi9.jpeg",
+              title: "Juara 3 Pencak Silat Grisse 2025",
+              desc: "Prestasi siswa dalam ajang lomba pencak silat Grisse 2025.",
             },
           ],
         },
