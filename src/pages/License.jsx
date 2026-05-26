@@ -11,6 +11,14 @@ const License = () => {
     },
 
     {
+      title: "Essential Skills Social Influence",
+      org: "MySkill Short Class",
+      date: "May 26th, 2026",
+      img: "assets/Certificate/Essential Skills Social Influence.jpg",
+      link: "https://drive.google.com/file/d/15asQ-LlnptzeITEPKPxqtXlYyQExMyVq/view?usp=sharing",
+    },
+
+    {
       title: "Essential Skills Adaptability",
       org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
       date: "2026",
