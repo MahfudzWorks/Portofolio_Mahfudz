@@ -3,6 +3,14 @@ import {useState} from 'react'
 const License = () => {
   const licenses = [
     {
+      title: "Building Website with Lovable AI",
+      org: "MySkill Short Class",
+      date: "May 21th, 2026",
+      img: "assets/Certificate/Sertifikat Building Website with Lovable AI.jpg",
+      link: "https://drive.google.com/file/d/1CSErC4LXNdOXw1RgTjYIlEpKB6PS8GME/view?usp=sharing",
+    },
+
+    {
       title: "Data Science Introduction",
       org: "MySkill Short Class",
       date: "May 12th, 2026",
