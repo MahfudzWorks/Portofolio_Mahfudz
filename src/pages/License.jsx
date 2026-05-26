@@ -17,7 +17,7 @@ const License = () => {
       img: "assets/Certificate/Essential Skills Adaptability.jpg",
       link: "https://drive.google.com/file/d/18cjwTF7hui55I6XdDjVXlbrrPF9SlNPl/view?usp=sharing",
     },
-
+    
     {
       title: "Essential Skills Digital Disruption & Transformation",
       org: "Gerakan Nasional Indonesia Kompeten(GNIK) & Kementerian Ketenagakerjaan RI",
