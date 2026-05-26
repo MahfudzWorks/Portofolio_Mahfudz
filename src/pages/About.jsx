@@ -93,7 +93,6 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* Projects */}
                 <div className="p-[2px] rounded-2xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
                   <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 text-center h-full">
                     <span className="block text-2xl font-bold text-blue-500">
@@ -107,7 +106,6 @@ const About = () => {
 
               </div>
 
-              {/* Button */}
               <div className="mt-8 inline-block p-[2px] rounded-xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
                 <button
                   className="

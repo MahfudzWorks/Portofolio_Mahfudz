@@ -56,18 +56,23 @@ const Home = () => {
         
         <a
           href="#contact"
-          className="p-[2px] bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] rounded-3xl inline-block"
+          className="mt-8 inline-block p-[2px] rounded-xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
         >
-          <div
-            className="flex items-center justify-center gap-2 
-            bg-black text-white 
-            dark:bg-white dark:text-black
-            font-semibold px-6 h-10 sm:h-12 rounded-3xl
-            text-sm sm:text-base
-            transition-all duration-300 ease-in-out
-            hover:scale-105
-            hover:shadow-xl
-            active:scale-[0.98]"
+           <div
+            className="flex items-center gap-2
+            bg-white dark:bg-gray-800
+            text-gray-700 dark:text-white
+            font-semibold
+            px-7 py-3 rounded-xl
+            transition-all duration-300
+            hover:bg-gradient-to-r
+            hover:from-green-50
+            hover:to-blue-50
+            dark:hover:from-gray-700
+            dark:hover:to-gray-900
+            hover:shadow-lg
+            active:scale-[0.98]
+            "
           >
             <span>Contact me here 📞</span>
           </div>
@@ -76,18 +81,23 @@ const Home = () => {
         <a
           href="CV_Mahfudz_Alfanani_Syaviqi.pdf"
           download
-          className="p-[2px] bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] rounded-3xl inline-block"
+          className="mt-8 inline-block p-[2px] rounded-xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
         >
           <div
-            className="flex items-center justify-center gap-2 
-            bg-white text-black 
-            dark:bg-gray-800 dark:text-white
-            font-semibold px-6 h-10 sm:h-12 rounded-3xl
-            text-sm sm:text-base
-            transition-all duration-300 ease-in-out
-            hover:scale-105
-            hover:shadow-xl
-            active:scale-[0.98]"
+            className="flex items-center gap-2
+            bg-white dark:bg-gray-800
+            text-gray-700 dark:text-white
+            font-semibold
+            px-7 py-3 rounded-xl
+            transition-all duration-300
+            hover:bg-gradient-to-r
+            hover:from-green-50
+            hover:to-blue-50
+            dark:hover:from-gray-700
+            dark:hover:to-gray-900
+            hover:shadow-lg
+            active:scale-[0.98]
+            "
           >
             <span>Download CV ⬇️</span>
           </div>
@@ -103,22 +113,26 @@ const Home = () => {
         {[
           {
             href: "https://www.linkedin.com/in/mahfudz-alfanani-syaviqi-572258321/",
-            icon: "assets/icon/LinkedIn.svg",
+            iconLight: "assets/icon/LinkedIn.svg",
+            iconDark: "assets/icon/LinkedIn-dark.svg",
             alt: "LinkedIn",
           },
           {
             href: "https://wa.me/6282140363716",
-            icon: "assets/icon/WhatsApp.svg",
+            iconLight: "assets/icon/WhatsApp.svg",
+            iconDark: "assets/icon/WhatsApp-dark.svg",
             alt: "WhatsApp",
           },
           {
             href: "https://github.com/MahfudzWorks",
-            icon: "assets/icon/GitHub.svg",
+            iconLight: "assets/icon/GitHub.svg",
+            iconDark: "assets/icon/GitHub-dark.svg",
             alt: "GitHub",
           },
           {
             href: "https://www.instagram.com/mahfudzalfa_/",
-            icon: "assets/icon/Instagram.svg",
+            iconLight: "assets/icon/Instagram.svg",
+            iconDark: "assets/icon/Instagram-dark.svg",
             alt: "Instagram",
           },
         ].map((social, index) => (
@@ -129,15 +143,28 @@ const Home = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="p-[2px] rounded-full bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)]
-            hover:shadow-lg transition duration-300"
+            className="
+              p-[2px]
+              rounded-full
+              bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)]
+              hover:shadow-lg
+              transition duration-300
+            "
           >
             <div className="bg-white dark:bg-gray-800 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+
               <img
-                src={social.icon}
+                src={social.iconLight}
                 alt={social.alt}
-                className="w-6 h-6 sm:w-8 sm:h-8"
+                className="w-6 h-6 sm:w-8 sm:h-8 block dark:hidden"
               />
+
+              <img
+                src={social.iconDark}
+                alt={social.alt}
+                className="w-6 h-6 sm:w-8 sm:h-8 hidden dark:block"
+              />
+
             </div>
           </motion.a>
         ))}
