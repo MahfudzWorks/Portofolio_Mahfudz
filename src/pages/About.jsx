@@ -17,11 +17,22 @@ const About = () => {
           
           <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
             
-            <div className="p-[3px] rounded-[45px] bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
+            <div className="p-[3px] rounded-[32px] overflow-hidden bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
               <img
                 src="assets/about-foto.jpeg"
                 alt="About"
-                className="w-64 sm:w-72 md:w-80 h-[500px] rounded-[40px] object-cover bg-white dark:bg-gray-900"
+                className="
+                  w-64
+                  h-64
+                  sm:w-72
+                  sm:h-72
+                  md:w-80
+                  md:h-[500px]
+                  rounded-[30px]
+                  object-cover
+                  object-bottom
+                  bg-white dark:bg-gray-900
+                "
               />
             </div>
 

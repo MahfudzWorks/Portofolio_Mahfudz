@@ -5,22 +5,26 @@ const Footer = () => {
     {
       name: "LinkedIn",
       link: "https://www.linkedin.com/in/mahfudz-alfanani-syaviqi-572258321/",
-      icon: "assets/icon/LinkedIn.svg",
+      iconLight: "assets/icon/LinkedIn.svg",
+      iconDark: "assets/icon/LinkedIn-dark.svg",
     },
     {
       name: "WhatsApp",
       link: "https://wa.me/6282140363716",
-      icon: "assets/icon/WhatsApp.svg",
+      iconLight: "assets/icon/WhatsApp.svg",
+      iconDark: "assets/icon/WhatsApp-dark.svg",
     },
     {
       name: "GitHub",
       link: "https://github.com/MahfudzWorks",
-      icon: "assets/icon/GitHub.svg",
+      iconLight: "assets/icon/GitHub.svg",
+      iconDark: "assets/icon/GitHub-dark.svg",
     },
     {
       name: "Instagram",
       link: "https://www.instagram.com/mahfudzalfa_/",
-      icon: "assets/icon/Instagram.svg",
+      iconLight: "assets/icon/Instagram.svg",
+      iconDark: "assets/icon/Instagram-dark.svg",
     },
   ];
 
@@ -82,21 +86,36 @@ const Footer = () => {
                     transition-all duration-300
                   "
                 >
+
                   <img
-                    src={sosial.icon}
+                    src={sosial.iconLight}
                     alt={sosial.name}
                     className="
                       w-5 h-5 sm:w-6 sm:h-6
+                      block dark:hidden
                       transition-transform duration-300
-                      hover:scale-110
                     "
                   />
+
+                  <img
+                    src={sosial.iconDark}
+                    alt={sosial.name}
+                    className="
+                      w-5 h-5 sm:w-6 sm:h-6
+                      hidden dark:block
+                      transition-transform duration-300
+                    "
+                  />
+
                 </div>
               </a>
             ))}
           </div>
 
-          <div className="w-full mt-8 pt-5 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
+          <div className="w-full mt-8 pt-5 relative">
+
+            <div className="absolute top-0 left-0 w-full h-[2px] rounded-full bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"></div>
+
             <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
               © {new Date().getFullYear()}{" "}
               <span className="font-semibold text-gray-800 dark:text-white">
@@ -104,6 +123,7 @@ const Footer = () => {
               </span>
               . All Rights Reserved.
             </p>
+
           </div>
 
         </div>
