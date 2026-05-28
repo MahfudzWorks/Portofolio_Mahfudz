@@ -51,12 +51,12 @@ const Home = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
-        className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 justify-center w-full sm:w-auto"
+        className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mt-5 sm:mt-6 justify-center"
       >
         
         <a
           href="#contact"
-          className="mt-8 inline-block p-[2px] rounded-xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
+          className="mt-4 sm:mt-8 inline-block w-fit p-[2px] rounded-xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
         >
            <div
             className="flex items-center gap-2
@@ -81,7 +81,7 @@ const Home = () => {
         <a
           href="CV_Mahfudz_Alfanani_Syaviqi.pdf"
           download
-          className="mt-8 inline-block p-[2px] rounded-xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
+          className="mt-4 sm:mt-8 inline-block w-fit p-[2px] rounded-xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"
         >
           <div
             className="flex items-center gap-2
