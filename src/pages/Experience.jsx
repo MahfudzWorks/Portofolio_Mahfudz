@@ -22,12 +22,23 @@ const Experience = () => {
 
        buttons: [
         {
-          text: "View Certificate",
+          text: "View Certificate PT Pabrik Kertas Tjiwi Kimia Tbk",
           images: [
             {
               src: "assets/Certificate/ETjiwiKimia/SMagangTjiwiKimia.jpg",
               title: "Sertifikat Magang PT Pabrik Kertas Tjiwi Kimia Tbk",
               desc: "Sertifikat program magang di PT Pabrik Kertas Tjiwi Kimia Tbk pada divisi Stationery-PAD sebagai bentuk pengalaman kerja dan pengembangan kemampuan di bidang produksi, administrasi, serta quality control.",
+            }
+          ],
+        },
+
+        {
+          text: "View Certificate Kemnaker (MagangHub)",
+          images: [
+            {
+              src: "assets/Certificate/ETjiwiKimia/SMagangKemnakerRI.jpg",
+              title: "Sertifikat Kemnaker (MagangHub)",
+              desc: "Program Pemagangan Lulusan Perguruan Tinggi yang diselenggarakan oleh Kementerian Ketenagakerjaan Republik Indonesia melalui MagangHub di PT Pabrik Kertas Tjiwi Kimia Tbk selama 6 bulan pada posisi Operator Stationary Pad. Memahami proses operasional produksi, penerapan SOP kerja, serta pengalaman kerja di lingkungan industri manufaktur.",
             }
           ],
         },
@@ -196,7 +207,7 @@ const Experience = () => {
     
     {
       title: "Software Developer",
-      company: "CV. Fintechnology Consultant Indonesian",
+      company: "CV. FI Technology Consultant Indonesian",
       date: "08/2024 - 12/2024",
       list: [
         "Mengembangkan sistem berbasis website menggunakan framework Laravel (frontend dan backend)",
@@ -217,12 +228,12 @@ const Experience = () => {
 
         {
           text: "View Certificate",
-          images: [],
-        },
-
-        {
-          text: "View Documentation",
           images: [
+            {
+              src: "assets/Certificate/EFITech/SMagangFiTechnology.png",
+              title: "Sertifikat Magang FI Technology",
+              desc: "Sertifikat program magang di FI Technology sebagai bentuk pengalaman kerja dan pengembangan kemampuan di bidang teknologi, pengembangan web, serta implementasi sistem berbasis digital.",
+            }
           ],
         },
       ],
