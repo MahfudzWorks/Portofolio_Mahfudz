@@ -27,7 +27,7 @@ const Projects = () => {
             title: "Project Sistem E-Commerce BestCell",
             text: "SIREPEN-BestCell adalah sistem informasi yang dirancang untuk mendukung proses penjualan handphone di Toko BestCell. Sistem ini dilengkapi dengan fitur rekomendasi produk berbasis User-Based Collaborative Filtering (UBCF) untuk membantu pelanggan menemukan produk sesuai preferensi mereka. Pada sisi admin, sistem ini menyediakan fitur manajemen keuangan yang menampilkan laporan transaksi, pencatatan penjualan, serta ringkasan pendapatan, sehingga memudahkan pengelolaan dan pengambilan keputusan.",
             image: "assets/P-BestCell.svg",
-            link: "",
+            link: "https://mahfudzworks.github.io/Project_E-Commerce_BestCell_LandingPage/",
             icons: [
                 { type: "component", value: <SiLaravel className="text-red-500 text-2xl" /> },
                 { type: "component", value: <SiPhp className="text-indigo-400 text-2xl" /> },
