@@ -150,6 +150,21 @@ const Projects = () => {
         <span className="inline-block animate-pulse">🚧</span>
       </h1>
 
+      <div className="text-center max-w-3xl mb-6 px-4">
+        <div className="inline-block bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+          Private & Selected Projects
+        </div>
+
+        <p className="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
+          Berikut adalah sebagian project yang dapat ditampilkan secara publik.
+          Sebagian project lainnya merupakan <b>private project</b> dan tidak ditampilkan di sini.
+        </p>
+
+        <p className="text-sm text-gray-500 dark:text-gray-300 mt-2">
+          Full portfolio tersedia dalam bentuk PDF dan dapat diakses melalui kontak atau permintaan langsung.
+        </p>
+      </div>
+
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl w-full mt-8">
         {projects.map((project) => (
           <div

@@ -2,6 +2,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
 html,
 body,
 #root {
@@ -9,12 +17,7 @@ body,
 }
 
 body {
-  background-color: white;
-  color: black;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.dark body {
-  background-color: #111827;
-  color: white;
+  transition:
+    background-color .3s,
+    color .3s;
 }

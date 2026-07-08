@@ -179,7 +179,7 @@ const Contact = () => {
         )}
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes messagePop {
           0% {
             opacity: 0;
