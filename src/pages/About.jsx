@@ -1,149 +1,160 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
-  return (
-    <section
-      id="about"
-      className="flex flex-col justify-center items-center scroll-mt-26 px-4 sm:px-6 lg:px-16 py-16"
-    >
-      <h1 className="text-2xl sm:text-3xl font-bold mt-4 text-center text-black dark:text-white">
-        <span className="inline-block">👨‍💻</span> About Me{" "}
-        <span className="inline-block animate-spin">🌟</span>
-      </h1>
+  // Keyframes untuk transisi warna teks & dekorasi agar serasi dengan Google
+  const googleTextGlow = [
+    "text-blue-500",
+    "text-red-500",
+    "text-yellow-500",
+    "text-green-500",
+    "text-blue-500"
+  ];
 
-      <div className="mt-10 p-[2px] rounded-3xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)] max-w-6xl w-full">
+  return (
+    <motion.section
+      id="about"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col justify-center items-center scroll-mt-24 px-6 sm:px-12 lg:px-20 py-20 text-black dark:text-white relative overflow-hidden"
+    >
+      {/* ─── EFEK LATAR BELAKANG AMBIENT GOOGLE (AKTIF BERGERAK) ─── */}
+      <motion.div 
+        animate={{ 
+          x: [0, 40, -20, 0], 
+          y: [0, -30, 20, 0],
+          scale: [1, 1.1, 0.9, 1]
+        }}
+        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        className="absolute top-1/3 -right-20 w-[300px] h-[300px] bg-gradient-to-r from-blue-500/10 via-red-500/5 to-transparent blur-[100px] rounded-full pointer-events-none" 
+      />
+      <motion.div 
+        animate={{ 
+          x: [0, -40, 30, 0], 
+          y: [0, 40, -10, 0],
+          scale: [1, 0.9, 1.1, 1]
+        }}
+        transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+        className="absolute bottom-10 -left-20 w-[350px] h-[350px] bg-gradient-to-r from-yellow-500/5 via-green-500/10 to-transparent blur-[120px] rounded-full pointer-events-none" 
+      />
+
+      {/* Judul Halaman */}
+      <div className="flex flex-col items-center mb-16">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+          Tentang Saya
+        </h2>
+        {/* Garis Pembatas dengan Animasi Gradasi Berjalan */}
+        <motion.div 
+          animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          style={{ backgroundSize: "200% 200%" }}
+          className="h-[3px] w-16 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 rounded-full mt-3" 
+        />
+      </div>
+
+      {/* Kontainer Utama Bento Style */}
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <div className="bg-white dark:bg-gray-900 rounded-3xl p-6 sm:p-10 transition-colors duration-300">
-          
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
-            
-            <div className="p-[3px] rounded-[32px] overflow-hidden bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
+        {/* Kolom Kiri: Foto Profil dengan Google Active Border Ring */}
+        <div className="lg:col-span-5 flex justify-center lg:sticky lg:top-28">
+          <div className="relative group p-[3px] rounded-[30px] overflow-hidden">
+            {/* Bingkai Google yang Berputar Aktif di Belakang Foto */}
+            <motion.div 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 rounded-[30px]"
+            />
+            <div className="relative rounded-[27px] p-1 bg-white dark:bg-gray-950">
               <img
                 src="assets/about-foto.jpeg"
-                alt="About"
-                className="
-                  w-64
-                  h-64
-                  sm:w-72
-                  sm:h-72
-                  md:w-80
-                  md:h-[500px]
-                  rounded-[30px]
-                  object-cover
-                  object-bottom
-                  bg-white dark:bg-gray-900
-                "
+                alt="Mahfudz Alfanani"
+                className="w-full max-w-[320px] h-[400px] sm:h-[460px] rounded-[24px] object-cover object-center bg-gray-50 dark:bg-gray-900 shadow-xl"
               />
-            </div>
-
-            <div className="max-w-2xl text-center lg:text-left">
-              
-              <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-3">
-                Halo 👋 Saya{" "}
-                <span className="text-slate-800 dark:text-white">
-                  Mahfudz Alfanani Syaviqi
-                </span>
-              </h2>
-
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-5 leading-relaxed">
-                Seorang{" "}
-                <span className="text-slate-800 dark:text-white">
-                  Web Developer 💻
-                </span>{" "}
-                dari{" "}
-                <span className="text-slate-800 dark:text-white">
-                  Indonesia
-                </span>{" "}
-                🌏
-              </h3>
-
-              <p className="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300">
-                Saya merupakan lulusan S1 Teknik Informatika Universitas Muhammadiyah
-                Gresik yang memiliki minat dalam pengembangan website, sistem
-                informasi, serta pengolahan data digital.
-                <br />
-                <br />
-                Memiliki pengalaman sebagai Software Developer Internship di CV
-                Fintechnology Consultant Indonesian dengan fokus pengembangan sistem
-                berbasis Laravel dan website e-commerce. Selain itu, saya juga
-                menjalankan jasa digital dan administrasi melalui Jasa Joki Tugas
-                Vyyy yang bergerak di bidang pengolahan data, desain, pembuatan
-                website, dan kebutuhan akademik.
-                <br />
-                <br />
-                Saya terbiasa menggunakan teknologi seperti HTML, CSS, JavaScript,
-                React, Laravel, PHP, MySQL, dan Tailwind CSS untuk membangun website
-                modern dan responsif. Saya juga memiliki kemampuan dalam
-                administrasi, teamwork, komunikasi, serta problem solving melalui
-                pengalaman organisasi dan project yang telah saya kerjakan.
-              </p>
-
-              <div className="w-full h-1 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-400 to-green-500 rounded-full my-6"></div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                
-                <div className="p-[2px] rounded-2xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 text-center h-full">
-                    <span className="block text-2xl font-bold text-blue-500">
-                      1+
-                    </span>
-                    <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Tahun Pengalaman
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-[2px] rounded-2xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 text-center h-full">
-                    <span className="block text-2xl font-bold text-blue-500">
-                      8+
-                    </span>
-                    <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Bahasa & Framework
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-[2px] rounded-2xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 text-center h-full">
-                    <span className="block text-2xl font-bold text-blue-500">
-                      10+
-                    </span>
-                    <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Project Selesai
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-              <div className="mt-8 inline-block p-[2px] rounded-xl bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]">
-                <button
-                  className="
-                    flex items-center gap-2
-                    bg-white dark:bg-gray-800
-                    text-gray-700 dark:text-white
-                    font-semibold
-                    px-7 py-3 rounded-xl
-                    transition-all duration-300
-                    hover:bg-gradient-to-r
-                    hover:from-green-50
-                    hover:to-blue-50
-                    dark:hover:from-gray-700
-                    dark:hover:to-gray-900
-                    hover:shadow-lg
-                    active:scale-[0.98]
-                  "
-                >
-                  Hubungi Saya 🚀
-                </button>
-              </div>
-
             </div>
           </div>
         </div>
+
+        {/* Kolom Kanan: Detail Informasi */}
+        <div className="lg:col-span-7 flex flex-col gap-6">
+          
+          {/* KARTU INTRO UTAMA (Efek Garis Tepi Google yang Mengalir Halus) */}
+          <div className="relative p-[1px] rounded-3xl overflow-hidden bg-gray-200/80 dark:bg-gray-800/80 group">
+            {/* Animasi Garis Cahaya Google Saat Hover Kartu */}
+            <motion.div 
+              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+              style={{ backgroundSize: "200% 200%" }}
+              className="absolute inset-0 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl"
+            />
+            
+            <div className="relative p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-gray-950/90 backdrop-blur-xl shadow-sm">
+              <h3 className="text-2xl font-bold mb-4">
+                Halo, Saya <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-red-500 to-amber-500 font-extrabold">Mahfudz Alfanani Syaviqi</span> 👋
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base mb-4">
+                Saya merupakan lulusan **S1 Teknik Informatika dari Universitas Muhammadiyah Gresik** yang memiliki gairah besar dalam merancang sistem digital yang efisien, responsif, dan berbasis data.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+                Melalui pengalaman kerja praktik sebagai *Software Developer Internship* di **CV Fintechnology Consultant Indonesian**, saya mengasah keahlian membangun platform e-commerce dan sistem operasional menggunakan ekosistem Laravel. Di samping itu, saya aktif mengelola operasional layanan digital akademik melalui **Jasa Joki Tugas Vyyy** di bidang pengolahan data kompleks, desain, dan integrasi web.
+              </p>
+            </div>
+          </div>
+
+          {/* GRID STATISTIK PENDUKUNG (Dengan Aksen Titik Google Aktif) */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { title: "1+ Tahun", desc: "Pengalaman Kerja", border: "hover:border-blue-500/50" },
+              { title: "8+ Inti", desc: "Bahasa & Framework", border: "hover:border-red-500/50" },
+              { title: "10+ Sukses", desc: "Project Selesai", border: "hover:border-green-500/50" }
+            ].map((stat, i) => (
+              <div 
+                key={i} 
+                className={`relative p-5 rounded-2xl border border-gray-200/60 dark:border-gray-800/60 bg-white/60 dark:bg-gray-900/60 backdrop-blur-sm text-center shadow-sm transition-all duration-300 ${stat.border} group`}
+              >
+                {/* Efek Indikator Warna Google di Setiap Pojok Kartu Statistik */}
+                <div className={`absolute top-2 right-2 w-1.5 h-1.5 rounded-full ${i === 0 ? "bg-blue-500" : i === 1 ? "bg-red-500" : "bg-green-500"} animate-pulse`} />
+                
+                <span className="block text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                  {stat.title}
+                </span>
+                <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-1">
+                  {stat.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* KARTU CORE STACK SNEAK-PEEK */}
+          <div className="p-6 rounded-3xl border border-gray-200/60 dark:border-gray-800/60 bg-white/40 dark:bg-gray-900/40 backdrop-blur-md">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3 flex items-center gap-2">
+              <span className="flex gap-1"><span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span><span className="w-1.5 h-1.5 rounded-full bg-red-500"></span><span className="w-1.5 h-1.5 rounded-full bg-yellow-500"></span><span className="w-1.5 h-1.5 rounded-full bg-green-500"></span></span>
+              Core Tech Stack & Soft Skills
+            </h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              HTML, CSS, JavaScript, React, Laravel, PHP, MySQL, Tailwind CSS • Administrasi Digital, Kerja Sama Tim, Komunikasi Organisasi, Masalah Solutif (*Problem Solving*).
+            </p>
+          </div>
+
+          {/* TOMBOL AKSI UTAMA (Dengan Gradasi Google Bergerak) */}
+          <div className="mt-2">
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              style={{ backgroundSize: "200% 200%" }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 via-red-500 via-yellow-500 to-green-600 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-blue-500/20 text-sm sm:text-base"
+            >
+              Mari Berkolaborasi 🚀
+            </motion.a>
+          </div>
+
+        </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
