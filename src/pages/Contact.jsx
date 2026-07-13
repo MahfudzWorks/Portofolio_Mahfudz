@@ -70,7 +70,7 @@ const Contact = () => {
         Hubungi Saya
       </div>
 
-      <p className="text-center max-w-3xl text-gray-500 dark:text-gray-400 leading-relaxed mb-12">
+      <p className="text-center max-w-3xl text-gray-500 dark:text-gray-400 leading-relaxed">
         Jangan ragu untuk menghubungi saya jika ada kebutuhan kerja sama, pertanyaan, atau sekadar menyapa. Pesan akan langsung terkirim ke WhatsApp.
       </p>
 
