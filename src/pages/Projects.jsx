@@ -132,7 +132,7 @@ const Projects = () => {
     return (
     <section
       id="projects"
-      className="relative flex flex-col justify-center items-center scroll-mt-[90px] px-6 py-16"
+      className="relative z-10 flex flex-col justify-center items-center scroll-mt-[90px] px-6 py-16"
     >
       <div className="flex flex-col items-center mb-16">
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
@@ -157,23 +157,23 @@ const Projects = () => {
         Full portfolio PDF tersedia melalui kontak langsung.
       </p>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl w-full">
         {projects.map((project) => {
           const isLongText = project.text.length > 100;
           
           return (
             <div
               key={project.id}
-              className="group relative flex flex-col rounded-2xl p-[2px] overflow-hidden transition-all duration-500 hover:-translate-y-2"
+              className="group relative flex flex-col rounded-2xl p-[2px] overflow-hidden transition-all duration-500 lg:hover:-translate-y-2"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 opacity-30 group-hover:opacity-100 group-hover:animate-[spin_4s_linear_infinite] transition-all duration-500 rounded-2xl z-0" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 opacity-30 group-hover:opacity-100 group-hover:animate-[spin_4s_linear_infinite] transition-all duration-500 rounded-2xl z-0 pointer-events-none" />
 
               <div className="relative flex flex-col h-full bg-white dark:bg-gray-900 rounded-[14px] p-5 z-10 transition-colors duration-300">
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-800/50 aspect-video mb-4 relative"
+                  className="block overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-800/50 aspect-video mb-4 relative z-20"
                 >
                   <img
                     src={project.image}
@@ -196,7 +196,7 @@ const Projects = () => {
                 {isLongText && (
                   <button
                     onClick={() => toggleShowMore(project.id)}
-                    className="text-blue-600 dark:text-blue-400 font-medium mt-2 hover:text-blue-700 dark:hover:text-blue-300 transition-colors text-xs w-fit flex items-center gap-1 group/btn"
+                    className="text-blue-600 dark:text-blue-400 font-medium mt-2 hover:text-blue-700 dark:hover:text-blue-300 transition-colors text-xs w-fit flex items-center gap-1 group/btn relative z-20"
                   >
                     <span>{showMore[project.id] ? "Tampilkan lebih sedikit" : "Tampilkan lebih banyak"}</span>
                     <span className="transform group-hover/btn:translate-x-0.5 transition-transform">→</span>

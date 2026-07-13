@@ -109,7 +109,7 @@ const License = () => {
   return (
     <section
       id="license"
-      className="relative flex flex-col justify-center items-center py-16 px-4 scroll-mt-[90px]"
+      className="relative z-10 flex flex-col justify-center items-center py-16 px-4 scroll-mt-[90px]"
     >
       <div className="flex flex-col items-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
@@ -132,13 +132,14 @@ const License = () => {
         Berikut adalah kumpulan sertifikat pelatihan, kursus, dan pengakuan keahlian yang telah diperoleh untuk mendukung kompetensi di bidang teknologi dan pengembangan diri.
       </p>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full mx-auto px-4">
         {displayedLicenses.map((license, index) => (
           <div
             key={index}
-            className="group relative flex flex-col rounded-2xl p-[2px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-gray-950/50"
+            className="group relative flex flex-col rounded-2xl p-[2px] overflow-hidden transition-all duration-500 lg:hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-gray-950/50"
           >
-            <div className="absolute inset-0 bg-[conic-gradient(#4285F4,#EA4335,#FBBC04,#34A853,#4285F4)] opacity-20 group-hover:opacity-100 group-hover:animate-[spin_4s_linear_infinite] transition-all duration-500 rounded-2xl z-0" />
+      
+            <div className="absolute inset-0 bg-[conic-gradient(#4285F4,#EA4335,#FBBC04,#34A853,#4285F4)] opacity-20 group-hover:opacity-100 group-hover:animate-[spin_4s_linear_infinite] transition-all duration-500 rounded-2xl z-0 pointer-events-none" />
 
             <div className="relative flex flex-col h-full bg-white dark:bg-gray-900 rounded-[14px] p-5 z-10 transition-colors duration-300">
               <div className="w-full h-44 bg-gray-50 dark:bg-gray-800/50 rounded-xl overflow-hidden mb-4 flex items-center justify-center border border-gray-100 dark:border-gray-800">
@@ -167,7 +168,7 @@ const License = () => {
                 href={license.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full mt-auto group/btn relative p-[1.5px] rounded-xl overflow-hidden inline-block"
+                className="w-full mt-auto group/btn relative p-[1.5px] rounded-xl overflow-hidden inline-block z-20"
               >
                 <div className="absolute inset-0 bg-[conic-gradient(#4285F4,#EA4335,#FBBC04,#34A853,#4285F4)] opacity-60 group-hover/btn:opacity-100 transition-opacity duration-300" />
                 <div className="relative flex items-center justify-center gap-2 bg-white dark:bg-gray-800 group-hover/btn:bg-gray-100 dark:group-hover/btn:bg-gray-700 text-gray-600 dark:text-gray-200 font-semibold text-xs py-2.5 px-4 rounded-[10px] transition-all duration-300 shadow-sm active:scale-[0.98]">
@@ -196,7 +197,7 @@ const License = () => {
       {licenses.length > 9 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="group/show relative mt-12 p-[2px] rounded-xl overflow-hidden shadow-md active:scale-95 transition-all duration-350"
+          className="group/show relative mt-12 p-[2px] rounded-xl overflow-hidden shadow-md active:scale-95 transition-all duration-350 z-20"
         >
           <div className="absolute inset-0 bg-[conic-gradient(#4285F4,#EA4335,#FBBC04,#34A853,#4285F4)] animate-[spin_5s_linear_infinite]" />
           <div className="relative flex items-center justify-center bg-white dark:bg-gray-900 group-hover/show:bg-gray-50 dark:group-hover/show:bg-gray-800 text-gray-800 dark:text-white font-bold text-sm px-8 py-3 rounded-[10px] transition-colors duration-300">
