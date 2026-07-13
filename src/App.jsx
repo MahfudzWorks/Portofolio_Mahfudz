@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -13,52 +14,78 @@ import Footer from "./components/Footer";
 
 function App() {
   const [dark, setDark] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme !== null) {
-      return savedTheme === "dark";
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) return savedTheme === "dark";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
     }
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return false;
   });
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-
-    localStorage.setItem("theme", dark ? "dark" : "light");
+    const root = window.document.documentElement;
+    if (dark) {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
   }, [dark]);
 
-  return (
-    <div className="min-h-screen bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-white">
+  const pageVariants = {
+    offscreen: { opacity: 0, y: 20 },
+    onscreen: { 
+      opacity: 1, 
+      y: 0,
+      transition: { type: "spring", duration: 0.6, bounce: 0.2 }
+    }
+  };
 
+  return (
+    <div className="min-h-screen bg-slate-50 text-gray-900 transition-colors duration-500 dark:bg-gray-900 dark:text-gray-100 selection:bg-indigo-500 selection:text-white">
+      
       <button
         onClick={() => setDark((prev) => !prev)}
         className="
-          fixed bottom-5 right-5 z-50
+          fixed bottom-6 right-6 z-50
           flex h-12 w-12 items-center justify-center
           rounded-full
-          border border-gray-300 dark:border-gray-700
-          bg-white/80 dark:bg-gray-800/80
-          text-xl
-          shadow-lg
+          border border-gray-200 dark:border-gray-800
+          bg-white/70 dark:bg-gray-800/70
+          text-xl shadow-xl
           backdrop-blur-md
+          cursor-pointer
           transition-all duration-300
-          hover:scale-110
+          hover:scale-110 hover:shadow-2xl
           active:scale-95
         "
         aria-label="Toggle Theme"
       >
-        {dark ? "☀️" : "🌙"}
+
+        <motion.span
+          key={dark ? "sun" : "moon"}
+          initial={{ rotate: -45, opacity: 0 }}
+          animate={{ rotate: 0, opacity: 1 }}
+          exit={{ rotate: 45, opacity: 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          {dark ? "☀️" : "🌙"}
+        </motion.span>
       </button>
 
       <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Skills />
-      <Experience />
-      <License />
-      <Contact />
+      
+      <main className="space-y-20 overflow-hidden">
+        <motion.section initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.1 }} variants={pageVariants}><Home /></motion.section>
+        <motion.section initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.2 }} variants={pageVariants}><About /></motion.section>
+        <motion.section initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.2 }} variants={pageVariants}><Projects /></motion.section>
+        <motion.section initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.2 }} variants={pageVariants}><Skills /></motion.section>
+        <motion.section initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.2 }} variants={pageVariants}><Experience /></motion.section>
+        <motion.section initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.2 }} variants={pageVariants}><License /></motion.section>
+        <motion.section initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.2 }} variants={pageVariants}><Contact /></motion.section>
+      </main>
+
       <Footer />
     </div>
   );

@@ -1,25 +1,14 @@
 import { useState } from 'react'
-
-import {
-  FaReact,
-} from "react-icons/fa";
-
-import {
-  SiLaravel,
-  SiPhp,
-  SiJavascript,
-  SiMysql,
-  SiHtml5,
-  SiTailwindcss 
-} from "react-icons/si";
+import { motion } from "framer-motion"
+import { FaReact } from "react-icons/fa"
+import { SiLaravel, SiPhp, SiJavascript, SiMysql, SiTailwindcss } from "react-icons/si"
 
 const Projects = () => {
-
-    const [showMore, setShowMore] = useState({});
+    const [showMore, setShowMore] = useState({})
 
     const toggleShowMore = (id) => {
-        setShowMore((prev) => ({ ...prev, [id]: !prev[id] }));
-    };
+        setShowMore((prev) => ({ ...prev, [id]: !prev[id] }))
+    }
 
     const projects = [
         {
@@ -138,34 +127,36 @@ const Projects = () => {
                 { type: "component", value: <SiTailwindcss className="text-sky-400 text-xl" /> },
             ],
         },
-    ];
+    ]
 
     return (
     <section
       id="projects"
-      className="relative flex flex-col justify-center items-center scroll-mt-20 px-6 py-16"
+      className="relative flex flex-col justify-center items-center scroll-mt-[90px] px-6 py-16"
     >
-      {/* Header Section */}
-      <div className="flex flex-col items-center text-center max-w-3xl mb-12">
-        <h1 className="text-4xl font-extrabold tracking-tight text-black dark:text-white transition-colors duration-300 mb-4 flex items-center gap-3">
-          <span className="inline-block hover:scale-125 transition-transform duration-300">💻</span> 
+      <div className="flex flex-col items-center mb-16">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
           Projects
-          <span className="inline-block animate-pulse text-2xl">🚧</span>
-        </h1>
-
-        <div className="inline-flex items-center gap-1.5 bg-yellow-50 dark:bg-yellow-950/40 text-yellow-700 dark:text-yellow-400 px-4 py-1 rounded-full text-xs font-medium border border-yellow-200 dark:border-yellow-900/50 mb-4 shadow-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-ping"></span>
-          Private & Selected Projects
-        </div>
-
-        <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed">
-          Berikut adalah sebagian project yang dapat ditampilkan secara publik. 
-          Sebagian lainnya merupakan <b className="text-gray-800 dark:text-gray-200 font-semibold">private project</b>. 
-          Full portfolio PDF tersedia melalui kontak langsung.
-        </p>
+        </h2>
+        <motion.div 
+          animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          style={{ backgroundSize: "200% 200%" }}
+          className="h-[3px] w-16 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 rounded-full mt-3" 
+        />
       </div>
 
-      {/* Grid Projects */}
+      <div className="inline-flex items-center gap-1.5 bg-yellow-50 dark:bg-yellow-950/40 text-yellow-700 dark:text-yellow-400 px-4 py-1 rounded-full text-xs font-medium border border-yellow-200 dark:border-yellow-900/50 mb-4 shadow-sm">
+        <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-ping"></span>
+        Private & Selected Projects
+      </div>
+
+      <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed max-w-3xl text-center mb-12">
+        Berikut adalah sebagian project yang dapat ditampilkan secara publik. 
+        Sebagian lainnya merupakan <b className="text-gray-800 dark:text-gray-200 font-semibold">private project</b>. 
+        Full portfolio PDF tersedia melalui kontak langsung.
+      </p>
+
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl w-full">
         {projects.map((project) => {
           const isLongText = project.text.length > 100;
@@ -175,13 +166,9 @@ const Projects = () => {
               key={project.id}
               className="group relative flex flex-col rounded-2xl p-[2px] overflow-hidden transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Efek Border Bergerak Warna Google (Muncul Maksimal Saat Hover) */}
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 after:absolute after:inset-0 after:bg-gradient-to-l after:from-blue-500 after:via-red-500 opacity-30 group-hover:opacity-100 group-hover:animate-[spin_4s_linear_infinite] transition-all duration-500 rounded-2xl z-0" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-red-500 via-yellow-500 to-green-500 opacity-30 group-hover:opacity-100 group-hover:animate-[spin_4s_linear_infinite] transition-all duration-500 rounded-2xl z-0" />
 
-              {/* Konten Utama Card (Menjaga background asli tetap utuh) */}
               <div className="relative flex flex-col h-full bg-white dark:bg-gray-900 rounded-[14px] p-5 z-10 transition-colors duration-300">
-                
-                {/* Image Wrapper dengan Efek Zoom Smooth */}
                 <a
                   href={project.link}
                   target="_blank"
@@ -193,23 +180,19 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
-                  {/* Overlay subtle saat hover */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
                 </a>
 
-                {/* Title */}
                 <h2 className="font-bold text-lg text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 line-clamp-2">
                   {project.title}
                 </h2>
 
-                {/* Deskripsi */}
                 <p className="text-gray-600 dark:text-gray-400 mt-2.5 leading-relaxed text-sm flex-grow">
                   {showMore[project.id] || !isLongText
                     ? project.text
                     : project.text.substring(0, 100) + "..."}
                 </p>
 
-                {/* Tombol Show More */}
                 {isLongText && (
                   <button
                     onClick={() => toggleShowMore(project.id)}
@@ -220,10 +203,8 @@ const Projects = () => {
                   </button>
                 )}
 
-                {/* Divider halus sebelum tech stack */}
                 <div className="h-[1px] bg-gray-100 dark:bg-gray-800/80 my-4" />
 
-                {/* Tech Stack Icons */}
                 <div className="flex flex-wrap gap-2">
                   {project.icons.map((icon, index) => (
                     <div
@@ -244,7 +225,6 @@ const Projects = () => {
                     </div>
                   ))}
                 </div>
-
               </div>
             </div>
           );

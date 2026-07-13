@@ -29,105 +29,148 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="mt-20 w-full bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)] pt-[2px]">
+    <footer className="mt-28 w-full relative overflow-hidden">
+      
+      <div className="h-[4px] w-full bg-[linear-gradient(90deg,#4285F4,#EA4335,#FBBC04,#34A853,#4285F4)] bg-[length:200%_100%] animate-[gradientFlow_6s_linear_infinite]" />
+
       <div
         className="
-          bg-white dark:bg-gray-900
-          border-t border-gray-200 dark:border-gray-700
-          shadow-lg dark:shadow-black/30
-          transition-all duration-500
+          bg-white dark:bg-gray-950
+          border-t border-gray-100 dark:border-gray-900
+          shadow-xl transition-all duration-500
         "
       >
-        <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col items-center text-center">
-
-          <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
-            Mahfudz Alfanani Syaviqi
-          </h1>
-
-          <p
-            className="
-              mt-3
-              text-sm sm:text-base
-              text-gray-600 dark:text-gray-300
-              leading-relaxed
-              max-w-2xl
-              transition-colors duration-300
-            "
-          >
-            Sarjana Teknik Informatika Universitas Muhammadiyah Gresik tahun
-            2025. Fokus pada pengembangan website, sistem digital, dan solusi
-            berbasis teknologi modern.
-          </p>
-
-          <div className="flex justify-center gap-4 sm:gap-6 mt-7 flex-wrap">
-            {sosialMedia.map((sosial, index) => (
-              <a
-                key={index}
-                href={sosial.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={sosial.name}
+        <div className="max-w-6xl mx-auto px-6 pt-16 pb-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 text-left items-start">
+            
+            <div className="flex flex-col gap-3">
+              <h1 
                 className="
-                  p-[2px]
-                  rounded-full
-                  bg-[linear-gradient(to_right,#3b82f6,#ef4444,#facc15,#22c55e)]
-                  hover:scale-110
-                  hover:shadow-lg
-                  transition-all duration-300
+                  text-2xl font-black tracking-tight
+                  bg-[linear-gradient(90deg,#4285F4,#EA4335,#FBBC04,#34A853,#4285F4)]
+                  bg-[length:200%_100%]
+                  animate-[gradientFlow_8s_linear_infinite]
+                  bg-clip-text text-transparent
+                  cursor-default select-none
                 "
               >
-                <div
-                  className="
-                    bg-white dark:bg-gray-800
-                    rounded-full
-                    w-11 h-11 sm:w-12 sm:h-12
-                    flex items-center justify-center
-                    border border-gray-200 dark:border-gray-700
-                    transition-all duration-300
-                  "
+                Mahfudz Alfanani Syaviqi
+              </h1>
+              <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-sm transition-colors duration-300">
+                Sarjana Teknik Informatika Universitas Muhammadiyah Gresik (2025). Berdedikasi dalam menciptakan solusi teknologi web yang andal, efisien, dan berdampak positif.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <h2 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
+                Quick Navigation
+              </h2>
+              <div className="grid grid-cols-2 gap-2 text-sm font-medium">
+                <a 
+                  href="#home" 
+                  className="relative group/nav px-3 py-2 rounded-xl text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 w-fit"
                 >
+                  <span>Home</span>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover/nav:opacity-100 blur-[2px] transition-opacity duration-200" />
+                </a>
+                <a 
+                  href="#about" 
+                  className="relative group/nav px-3 py-2 rounded-xl text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 w-fit"
+                >
+                  <span>About</span>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover/nav:opacity-100 blur-[2px] transition-opacity duration-200" />
+                </a>
+                <a 
+                  href="#projects" 
+                  className="relative group/nav px-3 py-2 rounded-xl text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 w-fit"
+                >
+                  <span>Projects</span>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover/nav:opacity-100 blur-[2px] transition-opacity duration-200" />
+                </a>
+                <a 
+                  href="#skills" 
+                  className="relative group/nav px-3 py-2 rounded-xl text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 w-fit"
+                >
+                  <span>Skills</span>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover/nav:opacity-100 blur-[2px] transition-opacity duration-200" />
+                </a>
+                <a 
+                  href="#experience" 
+                  className="relative group/nav px-3 py-2 rounded-xl text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 w-fit"
+                >
+                  <span>Experience</span>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover/nav:opacity-100 blur-[2px] transition-opacity duration-200" />
+                </a>
+                <a 
+                  href="#license" 
+                  className="relative group/nav px-3 py-2 rounded-xl text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 w-fit"
+                >
+                  <span>License</span>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover/nav:opacity-100 blur-[2px] transition-opacity duration-200" />
+                </a>
+                <a 
+                  href="#contact" 
+                  className="relative group/nav px-3 py-2 rounded-xl text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 w-fit col-span-2"
+                >
+                  <span>Contact</span>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 via-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover/nav:opacity-100 blur-[2px] transition-opacity duration-200" />
+                </a>
+              </div>
+            </div>
 
-                  <img
-                    src={sosial.iconLight}
-                    alt={sosial.name}
-                    className="
-                      w-5 h-5 sm:w-6 sm:h-6
-                      block dark:hidden
-                      transition-transform duration-300
-                    "
-                  />
+            <div className="flex flex-col gap-4">
+              <h2 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
+                Connect With Me
+              </h2>
+              <div className="flex flex-wrap gap-4">
+                {sosialMedia.map((sosial, index) => (
+                  <a
+                    key={index}
+                    href={sosial.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={sosial.name}
+                    className="group relative p-[2px] rounded-full overflow-hidden transition-all duration-300 ease-out hover:scale-110 hover:shadow-lg"
+                  >
+                    <div className="absolute inset-0 bg-[conic-gradient(#4285F4,#EA4335,#FBBC04,#34A853,#4285F4)] opacity-0 group-hover:opacity-100 group-hover:animate-[spin_4s_linear_infinite] transition-all duration-500 rounded-full z-0" />
 
-                  <img
-                    src={sosial.iconDark}
-                    alt={sosial.name}
-                    className="
-                      w-5 h-5 sm:w-6 sm:h-6
-                      hidden dark:block
-                      transition-transform duration-300
-                    "
-                  />
+                    <div className="relative z-10 bg-gray-50 dark:bg-gray-900 rounded-full w-11 h-11 flex items-center justify-center border border-gray-200/60 dark:border-gray-800 transition-all duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
+                      <img src={sosial.iconLight} alt={sosial.name} className="w-5 h-5 block dark:hidden transition-transform duration-300 group-hover:scale-110" />
+                      <img src={sosial.iconDark} alt={sosial.name} className="w-5 h-5 hidden dark:block transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
 
-                </div>
-              </a>
-            ))}
           </div>
 
-          <div className="w-full mt-8 pt-5 relative">
-
-            <div className="absolute top-0 left-0 w-full h-[2px] rounded-full bg-[linear-gradient(to_right,#4285F4,#EA4335,#FBBC05,#34A853)]"></div>
-
-            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+          <div className="w-full mt-6 pt-6 border-t border-gray-100 dark:border-gray-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-gray-400 dark:text-gray-500 transition-colors duration-300">
               © {new Date().getFullYear()}{" "}
-              <span className="font-semibold text-gray-800 dark:text-white">
+              <span className="font-medium text-gray-700 dark:text-gray-300">
                 Mahfudz Alfanani Syaviqi
               </span>
               . All Rights Reserved.
             </p>
-
+            <div className="flex gap-4 text-[11px] font-medium text-gray-400 dark:text-gray-500">
+              <a href="#" className="hover:underline transition-colors">Privacy Policy</a>
+              <span>•</span>
+              <a href="#" className="hover:underline transition-colors">Terms of Service</a>
+            </div>
           </div>
 
         </div>
       </div>
+
+      <style>{`
+        @keyframes gradientFlow {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `}</style>
     </footer>
   )
 }
