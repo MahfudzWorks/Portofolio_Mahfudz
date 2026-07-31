@@ -112,7 +112,7 @@ const Home = () => {
           </motion.a>
 
           <motion.a
-            href="CV_Mahfudz_Alfanani_Syaviqi.pdf"
+            href="CV dan Portofolio_Mahfudz Alfanani Syaviqi.pdf"
             download
             whileHover={{ 
               scale: 1.03, 
