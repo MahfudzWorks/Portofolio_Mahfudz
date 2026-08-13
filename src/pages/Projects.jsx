@@ -13,6 +13,45 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
+            title: "Project VyyyTravel",
+            text: "VyyyTravel adalah website travel yang dirancang untuk menampilkan informasi destinasi wisata secara menarik dan responsif. Website ini menyediakan informasi destinasi, deskripsi tempat wisata, serta tampilan yang memudahkan pengguna dalam menemukan referensi perjalanan.",
+            image: "assets/P-VyyyTravel.svg",
+            link: "https://github.com/MahfudzWorks/Project_VyyyTravel",
+            icons: [
+                { type: "img", value: "assets/icon/HTML5.svg" },
+                { type: "img", value: "assets/icon/CSS3.svg" },
+                { type: "component", value: <SiTailwindcss className="text-cyan-400 text-xl" /> },
+                { type: "component", value: <SiJavascript className="text-yellow-400 text-xl" /> },
+            ],
+        },
+        {
+            id: 2,
+            title: "Project VyyyKedai",
+            text: "VyyyKedai adalah website kedai yang dibuat untuk menampilkan informasi produk dan layanan secara sederhana, modern, dan responsif. Website ini dirancang dengan tampilan yang user-friendly sehingga pengunjung dapat melihat informasi menu dan produk dengan mudah.",
+            image: "assets/P-VyyyKedai.svg",
+            link: "https://github.com/MahfudzWorks/Project_VyyyKedai",
+            icons: [
+                { type: "img", value: "assets/icon/HTML5.svg" },
+                { type: "img", value: "assets/icon/CSS3.svg" },
+                { type: "component", value: <SiTailwindcss className="text-cyan-400 text-xl" /> },
+                { type: "component", value: <SiJavascript className="text-yellow-400 text-xl" /> },
+            ],
+        },
+        {
+            id: 3,
+            title: "Project VyyyCoffee",
+            text: "VyyyCoffee adalah website coffee shop yang dirancang sebagai media informasi dan promosi digital. Website ini menampilkan informasi produk, menu, serta profil coffee shop dengan desain modern dan responsif untuk memberikan pengalaman yang nyaman bagi pengunjung.",
+            image: "assets/P-VyyyCoffee.svg",
+            link: "https://github.com/MahfudzWorks/Project_VyyyCoffee",
+            icons: [
+                { type: "img", value: "assets/icon/HTML5.svg" },
+                { type: "img", value: "assets/icon/CSS3.svg" },
+                { type: "component", value: <SiTailwindcss className="text-cyan-400 text-xl" /> },
+                { type: "component", value: <SiJavascript className="text-yellow-400 text-xl" /> },
+            ],
+        },
+        {
+            id: 4,
             title: "Project Sistem E-Commerce BestCell",
             text: "SIREPEN-BestCell adalah sistem informasi yang dirancang untuk mendukung proses penjualan handphone di Toko BestCell. Sistem ini dilengkapi dengan fitur rekomendasi produk berbasis User-Based Collaborative Filtering (UBCF) untuk membantu pelanggan menemukan produk sesuai preferensi mereka. Pada sisi admin, sistem ini menyediakan fitur manajemen keuangan yang menampilkan laporan transaksi, pencatatan penjualan, serta ringkasan pendapatan, sehingga memudahkan pengelolaan dan pengambilan keputusan.",
             image: "assets/P-BestCell.svg",
@@ -26,7 +65,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 2,
+            id: 5,
             title: "Project Landing Page PNRB",
             text: "Website resmi Pagarnusa Ranting Balongmojo yang dibuat untuk memberikan informasi mengenai kegiatan, struktur organisasi, galeri, dan berita terbaru. Dibangun menggunakan HTML, CSS, JavaScript bisa disesuaikan jika pakai framework lain.",
             image: "assets/P-PNRB.svg",
@@ -38,7 +77,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 3,
+            id: 6,
             title: "Project Landing Page Gym24",
             text: "Landing page untuk Gym24, pusat kebugaran yang menawarkan fasilitas modern, pelatih profesional, dan berbagai pilihan membership. Website ini dibuat untuk mempromosikan layanan Gym24 dengan tampilan modern, responsif, dan mudah digunakan.",
             image: "assets/P-Gym.svg",
@@ -50,7 +89,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 4,
+            id: 7,
             title: "Project Kalkulator",
             text: "Website kalkulator sederhana dengan tampilan modern dan responsif.",
             image: "assets/P-Kalkulator.svg",
@@ -63,7 +102,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 5,
+            id: 8,
             title: "Project BMI Kalkulator",
             text: "Aplikasi untuk menghitung BMI dengan tampilan sederhana dan interaktif.",
             image: "assets/P-BMIKalkulator.svg",
@@ -76,7 +115,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 6,
+            id: 9,
             title: "Project Color Palette",
             text: "Generator warna untuk membantu memilih kombinasi warna yang menarik.",
             image: "assets/P-CollorPalete.svg",
@@ -89,7 +128,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 7,
+            id: 10,
             title: "Project Digital Clock",
             text: "Jam digital real-time dengan tampilan modern dan responsif.",
             image: "assets/P-DigitalClock.svg",
@@ -102,7 +141,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 8,
+            id: 11,
             title: "Project Smart Quiz",
             text: "Aplikasi kuis interaktif untuk menguji pengetahuan pengguna.",
             image: "assets/P-SmartQuiz.svg",
@@ -115,7 +154,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 9,
+            id: 12,
             title: "Project Weather App",
             text: "Aplikasi pemantau cuaca real-time yang menampilkan informasi suhu, kelembapan, dan prakiraan cuaca berdasarkan lokasi yang dicari oleh pengguna secara instan.",
             image: "assets/P-WeatherApp.svg",
