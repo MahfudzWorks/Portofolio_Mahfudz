@@ -15,7 +15,7 @@ const Projects = () => {
             id: 1,
             title: "Project VyyyTravel",
             text: "VyyyTravel adalah website travel yang dirancang untuk menampilkan informasi destinasi wisata secara menarik dan responsif. Website ini menyediakan informasi destinasi, deskripsi tempat wisata, serta tampilan yang memudahkan pengguna dalam menemukan referensi perjalanan.",
-            image: "assets/P-VyyyTravel.svg",
+            image: "assets/P-VyyyTravel.png",
             link: "https://mahfudzworks.github.io/Project_VyyyTravel",
             icons: [
                 { type: "img", value: "assets/icon/Html5.svg" },
@@ -28,7 +28,7 @@ const Projects = () => {
             id: 2,
             title: "Project VyyyKedai",
             text: "VyyyKedai adalah website kedai yang dibuat untuk menampilkan informasi produk dan layanan secara sederhana, modern, dan responsif. Website ini dirancang dengan tampilan yang user-friendly sehingga pengunjung dapat melihat informasi menu dan produk dengan mudah.",
-            image: "assets/P-VyyyKedai.svg",
+            image: "assets/P-VyyyKedai.png",
             link: "https://mahfudzworks.github.io/Project_VyyyKedai",
             icons: [
                 { type: "img", value: "assets/icon/Html5.svg" },
@@ -41,7 +41,7 @@ const Projects = () => {
             id: 3,
             title: "Project VyyyCoffee",
             text: "VyyyCoffee adalah website coffee shop yang dirancang sebagai media informasi dan promosi digital. Website ini menampilkan informasi produk, menu, serta profil coffee shop dengan desain modern dan responsif untuk memberikan pengalaman yang nyaman bagi pengunjung.",
-            image: "assets/P-VyyyCoffee.svg",
+            image: "assets/P-VyyyCoffee.png",
             link: "https://mahfudzworks.github.io/Project_VyyyCoffee",
             icons: [
                 { type: "img", value: "assets/icon/Html5.svg" },
